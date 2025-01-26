@@ -12,6 +12,24 @@ namespace PetProject.Controllers
         {
             db = context;
         }
+
+        public IActionResult Filter(string name)
+        {
+            var users = db.Users.ToList();
+            
+            if (!string.IsNullOrEmpty(name))
+            {
+                users = users.Where(p => p.Name!.Contains(name)).ToList();
+            }
+
+            var viewModel = new UserListModel
+            {
+                Users = users.ToList(),
+                Name = name
+            };
+            
+            return View(viewModel);
+        }
  
         public async Task<IActionResult> Index()
         {
