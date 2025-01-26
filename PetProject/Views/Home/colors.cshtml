@@ -1,0 +1,15 @@
+﻿@{
+    ViewBag.Title = "Colors";
+}
+
+<h2>Привет zxcята!</h2>
+<form method='post'>
+    <label>Text:</label><br /> 
+    <input type="radio" name="color" value="blue" /><br />  <span>blue</span> <br />
+    <input type="radio" name="color" value="red" /><br />  <span>red</span> <br />
+    <input type="radio" name="color" value="green" /><br /><span>green</span>
+
+    <input type='submit' value='Send' />
+</form>
+
+@{await Html.RenderPartialAsync("zxc");}
