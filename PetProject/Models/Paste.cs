@@ -1,8 +1,12 @@
-﻿namespace PetProject.Models;
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace PetProject.Models;
 
 public class Paste
 {
-    public int Id { get; set; }
+    [Key]
+    public string Id { get; set; }
     public DateTime Date { get; set; }
+    [Required]
     public string Content { get; set; }
 }

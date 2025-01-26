@@ -1,22 +1,14 @@
-﻿@model IEnumerable<PetProject.Models.User>
- 
-<h2>Список пользователей</h2>
-<p><a asp-action="Create">Добавить пользователя</a></p>
-<table class="table">
-    <tr><th>Имя</th><th>Почта</th></tr>
-    @foreach (var item in Model)
-    {
-        <tr>
-            <td>@item.Name</td>
-            <td>@item.Email</td>
-            <td>
-                <a asp-action="Edit" asp-controller="Home" asp-route-id="@item.Id">Изменить</a>
-            </td>
-            <td>
-                <form asp-controller="Home" asp-action="Delete" method="post" asp-route-id="@item.Id">
-                    <input type="submit" value="Удалить"/>
-                </form>
-            </td>
-        </tr>
-    }
-</table>
+﻿@{
+    ViewBag.Title = "Главная страница";
+}
+
+<h2>Добавить новую запись</h2>
+<form asp-action="Paste" asp-controller="Paste" method="post">
+    <p>
+        <label>Введите текст</label><br />
+        <textarea name="content"></textarea> <!-- Убедитесь, что указали name="content" -->
+    </p>
+    <p>
+        <input type="submit" value="Сохранить"/>
+    </p>
+</form>
