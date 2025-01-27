@@ -32,36 +32,8 @@ build_property.EnableCodeStyleSeverity =
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWNjb3VudFxWaWV3c1xIb21lXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Rider Projects/PetProject/PetProject/Views/Home/colors.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxjb2xvcnMuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
-[D:/Rider Projects/PetProject/PetProject/Views/Home/create.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxjcmVhdGUuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
-[D:/Rider Projects/PetProject/PetProject/Views/Home/Edit.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxFZGl0LmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
-[D:/Rider Projects/PetProject/PetProject/Views/Home/Filter.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxGaWx0ZXIuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
-[D:/Rider Projects/PetProject/PetProject/Views/Home/getPaste.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxnZXRQYXN0ZS5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
 [D:/Rider Projects/PetProject/PetProject/Views/Home/index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxpbmRleC5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
-[D:/Rider Projects/PetProject/PetProject/Views/Home/text.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVx0ZXh0LmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
-[D:/Rider Projects/PetProject/PetProject/Views/Home/zxc.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVx6eGMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/Rider Projects/PetProject/PetProject/Views/Paste/GetPaste.cshtml]
