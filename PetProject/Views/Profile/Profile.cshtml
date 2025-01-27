@@ -1,0 +1,52 @@
+﻿@model PetProject.Models.UserEdit
+
+@{
+    ViewData["Title"] = "Profile";
+}
+
+<form asp-action="Edit" method="post">
+    <input type="hidden" asp-for="Id" value="@ViewBag.Id"/> <!-- Добавляем скрытое поле для id -->
+
+    <p>
+        <label asp-for="Name">Изменить имя</label><br/>
+        <input type="text" asp-for="Name"/>
+    </p>
+    <p>
+        <input type="submit" value="Изменить имя"/>
+    </p>
+</form>
+
+<form asp-action="Edit" method="post">
+    <input type="hidden" asp-for="Id" value="@ViewBag.Id"/> <!-- Добавляем скрытое поле для id -->
+
+    <p>
+        <label asp-for="Email">Изменить адрес электронной почты</label><br/>
+        <input type="email" asp-for="Email"/>
+    </p>
+    <p>
+        <input type="submit" value="Изменить email"/>
+    </p>
+</form>
+
+<form asp-action="Edit" method="post">
+    <input type="hidden" asp-for="Id" value="@ViewBag.Id"/> <!-- Добавляем скрытое поле для id -->
+
+    <p>
+        <label asp-for="Password">Введите предыдущий пароль</label><br/>
+        <input type="password" asp-for="Password"/>
+    </p>
+
+    <p>
+        <label asp-for="NewPassword">Новый пароль</label><br/>
+        <input type="password" asp-for="NewPassword"/>
+    </p>
+
+    <p>
+        <input type="submit" value="Изменить пароль"/>
+    </p>
+</form>
+
+<form asp-action="Delete" method="post">
+    <input type="hidden" name="id" value="@ViewBag.Id"/> <!-- Передаем id через скрытое поле -->
+    <input type="submit" value="Удалить пользователя"/>
+</form>

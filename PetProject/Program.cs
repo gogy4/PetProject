@@ -7,6 +7,7 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllersWithViews();
 builder.Services.AddScoped<PasteService>();
 builder.Services.AddScoped<RegisterService>();
+builder.Services.AddScoped<EditUserService>();
 var connection = builder.Configuration.GetConnectionString("MySqlConn");
 builder.Services.AddDbContext<AppDbContext>(options =>
 {

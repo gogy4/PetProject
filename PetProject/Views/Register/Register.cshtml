@@ -1,11 +1,11 @@
-﻿@model PetProject.Models.User
+﻿@model PetProject.Models.UserData
 
 @{
     ViewData["Title"] = "Register";
 }
 
 <h1>Регистрация</h1>
-<form>
+<form asp-action="Register" method="post">
     <p>
         <label asp-for="Name">Имя</label><br/>
         <input type="text" asp-for="Name"/>
