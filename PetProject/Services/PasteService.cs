@@ -1,8 +1,5 @@
 ﻿using System.IO.Compression;
-using System.Linq;
-using System.Security.Cryptography;
 using System.Text;
-using System.Threading.Tasks;
 using PetProject.Data;
 using PetProject.Models;
 using PetProject.Utils;
@@ -11,12 +8,12 @@ namespace PetProject.Services;
 
 public class PasteService
 {
-    private readonly AppDbContext _context;
-    private readonly IdGenerator idGenerator = new IdGenerator();
+    private readonly AppDbContext db;
+    private readonly IdGenerator idGenerator = new();
 
-    public PasteService(AppDbContext context)
+    public PasteService(AppDbContext db)
     {
-        _context = context;
+        this.db = db;
     }
 
     public async Task<Paste> CreatePasteAsync(string content)
@@ -27,8 +24,7 @@ public class PasteService
         do
         {
             uniqueId = idGenerator.GenerateUniqueId();
-        }
-        while (_context.Pastes.Any(x => x.Id == uniqueId)); // Проверяем, что ID действительно уникальный
+        } while (db.Pastes.Any(x => x.Id == uniqueId)); // Проверяем, что ID действительно уникальный
 
         var paste = new Paste
         {
@@ -36,20 +32,29 @@ public class PasteService
             Date = DateTime.UtcNow,
             Content = CompressString(content)
         };
-        _context.Pastes.Add(paste);
-        await _context.SaveChangesAsync();
+        db.Pastes.Add(paste);
+        await db.SaveChangesAsync();
 
         return paste;
     }
 
-    
-    public async Task<TextPaste?> GetPasteByIdAsync(string id)
+
+    public async Task<TextPaste?> GetPasteWithTextByIdAsync(string id)
     {
-        var paste = await _context.Pastes.FirstOrDefaultAsync(p => p.Id == id);
+        var paste = await db.Pastes.FirstOrDefaultAsync(p => p.Id == id);
+        if (paste == null) return null; // Возвращаем null, если объект не найден
+
         return new TextPaste(paste.Id, paste.Date, DecompressString(paste.Content));
     }
 
-    public Byte[] CompressString(string content)
+
+    public Paste GetPasteById(string id)
+    {
+        var paste = db.Pastes.FirstOrDefault(p => p.Id == id);
+        return db.Pastes.FirstOrDefault(p => p.Id == id);
+    }
+
+    private byte[] CompressString(string content)
     {
         var byteArr = new byte[0];
         if (!string.IsNullOrEmpty(content))
@@ -61,27 +66,31 @@ public class PasteService
                 {
                     zip.Write(byteArr, 0, byteArr.Length);
                 }
+
                 byteArr = stream.ToArray();
             }
         }
-        
+
         return byteArr;
     }
 
-    public string DecompressString(Byte[] byteArr)
+    private string DecompressString(byte[] byteArr)
     {
         var resultString = string.Empty;
         if (byteArr != null && byteArr.Length > 0)
-        {
-            using (MemoryStream stream = new MemoryStream(byteArr))
-            using (GZipStream zip = new GZipStream(stream, CompressionMode.Decompress))
-            using (StreamReader reader = new StreamReader(zip))
+            using (var stream = new MemoryStream(byteArr))
+            using (var zip = new GZipStream(stream, CompressionMode.Decompress))
+            using (var reader = new StreamReader(zip))
             {
-                resultString = reader.ReadToEnd(); 
+                resultString = reader.ReadToEnd();
             }
-        }
-        
+
         return resultString;
     }
-    
+
+    public void DeletePaste(Paste paste)
+    {
+        db.Pastes.Remove(paste);
+        db.SaveChanges();
+    }
 }

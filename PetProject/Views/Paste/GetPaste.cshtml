@@ -5,5 +5,11 @@
 }
 
 <h2>Paste Content</h2>
-<p>@Model.Content</p>
+<div style="white-space: pre;">@Model.Content</div>
 <p><small>Created at: @Model.Date</small></p>
+<p>
+    <form asp-action="Delete" method="post">
+        <input type="hidden" name="Id" value="@Model.Id"/>
+        <button type="submit">Удалить пасту</button>
+    </form>
+</p>

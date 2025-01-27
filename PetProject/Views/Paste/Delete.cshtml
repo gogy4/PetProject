@@ -1,0 +1,14 @@
+﻿@model PetProject.Models.Paste
+
+@{
+    ViewData["Title"] = "Delete Paste";
+}
+<h2>Удаление Пасты</h2>
+<p>
+    <form method="post" asp-action="Delete" asp-controller="Paste"></form>
+    <label asp-for="Id">Введите id пасты</label><br/>
+    <input type="text" asp-for="Id"/>
+</p>
+<p>
+    <input type="submit" value="Удалить"/>
+</p>

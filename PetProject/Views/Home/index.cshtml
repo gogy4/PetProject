@@ -1,7 +1,12 @@
 ﻿@{
     ViewBag.Title = "Главная страница";
 }
-
+@if (TempData["Message"] != null)
+{
+    <div>
+        @TempData["Message"]
+    </div>
+}
 <h2>Добавить новую запись</h2>
 <form asp-action="Paste" asp-controller="Paste" method="post">
     <p>
