@@ -5,7 +5,6 @@
     ViewData["Title"] = "Profile";
 }
 
-<!-- Форма для изменения имени -->
 <form asp-action="Edit" method="post">
     <input type="hidden" asp-for="Id" />
     <input type="hidden" asp-for="Email" />
@@ -23,7 +22,6 @@
     </p>
 </form>
 
-<!-- Форма для изменения email -->
 <form asp-action="Edit" method="post">
     <input type="hidden" asp-for="Id" />
     <input type="hidden" asp-for="Name" />
@@ -41,7 +39,6 @@
     </p>
 </form>
 
-<!-- Форма для изменения пароля -->
 <form asp-action="Edit" method="post">
     <div asp-validation-summary="All"></div>
     <input type="hidden" asp-for="Id" />
@@ -68,14 +65,13 @@
     </p>
 </form>
 
-<!-- Форма для удаления пользователя -->
 <form asp-action="Delete" method="post">
     <input type="hidden" name="id" asp-for="Id" />
     <input type="submit" value="Удалить пользователя"/>
 </form>
 
-<!-- Форма для выхода из аккаунта -->
 <form asp-action="Logout" method="post">
     <input type="hidden" name="id" asp-for="Id" />
     <input type="submit" value="Выйти из аккаунта"/>
 </form>
+

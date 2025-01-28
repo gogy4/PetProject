@@ -14,9 +14,14 @@ public class AppDbContext : DbContext
 
     public async Task RemoveExpiredPastesAsync()
     {
-        var expirationDate = DateTime.UtcNow.AddDays(-7);
-        var expiredRecord = Pastes.Where(x=>x.Date < expirationDate);
-        Pastes.RemoveRange(expiredRecord);
-        await SaveChangesAsync();
+        var expiredPastes = await Pastes
+            .Where(p => p.ExpirationDate <= DateTime.UtcNow)
+            .ToListAsync();
+
+        if (expiredPastes.Any())
+        {
+            Pastes.RemoveRange(expiredPastes);
+            await SaveChangesAsync();
+        }
     }
 }

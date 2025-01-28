@@ -21,7 +21,10 @@ public class LogInController : Controller
     [Route("/login")]
     public async Task<IActionResult> LogIn()
     {
-        return View();
+        var currentId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+        if (string.IsNullOrEmpty(currentId)) return View();
+        TempData["Message"] = "Вы уже вошли аккаунт, если хотите войти в новый, выйдите из текущего";
+        return RedirectToAction("index", "Home");
     }
     
     [HttpPost]

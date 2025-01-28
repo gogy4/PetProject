@@ -3,12 +3,11 @@ using PetProject.Models;
 
 namespace PetProject.Services;
 
-public class EditUserService
+public class PasteUserService
 {
-    private int Hash;
     private readonly AppDbContext db;
 
-    public EditUserService(AppDbContext db)
+    public PasteUserService(AppDbContext db)
     {
         this.db = db;
     }
@@ -18,7 +17,8 @@ public class EditUserService
        var user = await db.Users.FindAsync(userEdit.Id);
        if (!string.IsNullOrEmpty(userEdit.Name)) user.Name = userEdit.Name;
        if (!string.IsNullOrEmpty(userEdit.Email)) user.Email = userEdit.Email;
-       if (CheckPassword(userEdit.NewPassword, user.Password)) user.Password = GetHashedPassword(userEdit.NewPassword);
+       if (CheckPassword(userEdit.Password, user.Password))
+           user.Password = GetHashedPassword(userEdit.NewPassword);
        db.Users.Update(user);
        await db.SaveChangesAsync();
     }
@@ -31,13 +31,15 @@ public class EditUserService
     private int GetHashedPassword(string password)
     {
         const int hash = 499;
+        var hashPassword = 0;
         unchecked
         {
             for (var i = 0; i < password.Length - 1; i++)
-                Hash +=
+                hashPassword +=
                     (int)(password[i] * Math.Pow(hash, password.Length - 1 - i) + password[i + 1]);
 
-            return Hash;
+            
+            return hashPassword;
         }
     }
     

@@ -16,13 +16,16 @@ public class PasteController : Controller
 
     [HttpPost]
     [Route("Paste")]
-    public async Task<IActionResult> Paste(string content)
+    public async Task<IActionResult> Paste(string content, int expirationDays = 7) 
     {
-        if (string.IsNullOrEmpty(content)) return BadRequest("Content cannot be null or empty.");
+        if (string.IsNullOrEmpty(content)) 
+            return BadRequest("Content cannot be null or empty.");
+    
         var currentUserId = User.FindFirstValue(ClaimTypes.NameIdentifier);
-        var paste = await pasteService.CreatePasteAsync(content, currentUserId);
-        ViewData["PasteLink"] = Url.Action("GetPaste", "Home", new { id = paste.Id }, Request.Scheme);
-        return RedirectToAction("GetPaste", new { id = paste.Id});
+        var paste = await pasteService.CreatePasteAsync(content, currentUserId, expirationDays);
+    
+        ViewData["PasteLink"] = Url.Action("GetPaste", "Paste", new { id = paste.Id }, Request.Scheme);
+        return RedirectToAction("GetPaste", new { id = paste.Id });
     }
 
 

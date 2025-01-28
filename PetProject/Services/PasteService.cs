@@ -16,16 +16,18 @@ public class PasteService
         this.db = db;
     }
 
-    public async Task<Paste> CreatePasteAsync(string content, string userId)
+    public async Task<Paste> CreatePasteAsync(string content, string userId, int expirationDays)
     {
         var uniqueId = idGenerator.GenerateUniqueId();
         while (db.Pastes.Any(x => x.Id == uniqueId)) uniqueId = idGenerator.GenerateUniqueId();
 
         if (userId is null) userId = "Не авторизован";
+
         var paste = new Paste
         {
             Id = uniqueId,
             Date = DateTime.UtcNow,
+            ExpirationDate = DateTime.UtcNow.AddDays(expirationDays), // Устанавливаем срок действия
             Content = CompressString(content),
             UserId = userId
         };
@@ -36,12 +38,14 @@ public class PasteService
     }
 
 
+
     public async Task<TextPaste?> GetPasteWithText(string id)
     {
-        var paste = await db.Pastes.FirstOrDefaultAsync(x => x.Id == id);
+        var paste = await db.Pastes.FirstOrDefaultAsync(x => x.Id == id && x.ExpirationDate > DateTime.UtcNow);
         if (paste is null) return null;
         return new TextPaste(paste.Id, paste.Date, DecompressString(paste.Content), paste.UserId);
     }
+
 
 
     public Paste GetPasteById(string id)

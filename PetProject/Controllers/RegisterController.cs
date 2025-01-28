@@ -32,6 +32,11 @@ public class RegisterController : Controller
     public async Task<IActionResult> RegisterToDB(UserData userData)
     {
         var error = false;
+        if (await registerService.CheckEmail(userData.Email))
+        {
+            ModelState.AddModelError("Email", "Данная почта уже зарегистрирована");
+            error = true;
+        }
         if (userData.Password.Length < 8)
         {
             ModelState.AddModelError("Password", "Пароль должен быть длиннее 7 символов");

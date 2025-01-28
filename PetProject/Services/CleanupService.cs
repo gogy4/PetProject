@@ -34,7 +34,6 @@ namespace PetProject.Services
             using var scope = scopeFactory.CreateScope();
             var dbContext = scope.ServiceProvider.GetRequiredService<AppDbContext>();
 
-            // Асинхронно удаляем просроченные пасты
             await dbContext.RemoveExpiredPastesAsync();
         }
 

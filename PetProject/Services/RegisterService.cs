@@ -51,4 +51,9 @@ public class RegisterService
         await db.SaveChangesAsync();
         return user;
     }
+
+    public async Task<bool> CheckEmail(string email)
+    {
+        return await db.Users.AnyAsync(x => x.Email == email);
+    }
 }

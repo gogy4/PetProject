@@ -7,33 +7,28 @@ using PetProject.Models;
 using PetProject.Services;
 
 namespace PetProject.Controllers;
+
 [Route("profile")]
 public class ProfileController : Controller
 {
-    private readonly EditUserService editUserService;
+    private readonly PasteUserService _pasteUserService;
 
-    public ProfileController(EditUserService editUserService)
+    public ProfileController(PasteUserService pasteUserService)
     {
-        this.editUserService = editUserService;
+        this._pasteUserService = pasteUserService;
     }
 
     [HttpGet]
     [Route("")]
     public async Task<IActionResult> Profile()
     {
-        var currentUserId = User.FindFirstValue(ClaimTypes.NameIdentifier); 
+        var currentUserId = User.FindFirstValue(ClaimTypes.NameIdentifier);
 
-        if (string.IsNullOrEmpty(currentUserId)) 
-        {
-            return RedirectToAction("Register", "Register");
-        }
+        if (string.IsNullOrEmpty(currentUserId)) return RedirectToAction("Register", "Register");
 
-        var user = await editUserService.GetUser(currentUserId);
+        var user = await _pasteUserService.GetUser(currentUserId);
 
-        if (user == null)
-        {
-            return RedirectToAction("Register", "Register"); 
-        }
+        if (user == null) return RedirectToAction("Register", "Register");
 
         return View(new UserEdit(user));
     }
@@ -52,7 +47,8 @@ public class ProfileController : Controller
                 error = true;
             }
 
-            if (userEdit.NewPassword.ToLower() == userEdit.NewPassword || userEdit.NewPassword.ToUpper() == userEdit.NewPassword)
+            if (userEdit.NewPassword.ToLower() == userEdit.NewPassword ||
+                userEdit.NewPassword.ToUpper() == userEdit.NewPassword)
             {
                 ModelState.AddModelError("Password", "Символы в пароле должны быть разного регистра," +
                                                      " хотя бы один символ должен отличаться по регистру от других");
@@ -65,17 +61,18 @@ public class ProfileController : Controller
                                                      " один из специальных символов !@#$%^&*?_\\-+=");
                 error = true;
             }
-            var user = await editUserService.GetUser(userEdit.Id);
-            var passwordCorrect = editUserService.CheckPassword(userEdit.NewPassword, user.Password);
+
+            var user = await _pasteUserService.GetUser(userEdit.Id);
+            var passwordCorrect = _pasteUserService.CheckPassword(userEdit.Password, user.Password);
             if (!passwordCorrect)
             {
                 ModelState.AddModelError("Password", "Вы ввели неверный прошлый пароль");
                 error = true;
             }
         }
-        
+
         if (error) return View("Profile", userEdit);
-        editUserService.EditUser(userEdit);
+        await _pasteUserService.EditUser(userEdit);
         return RedirectToAction("Profile");
     }
 
@@ -84,7 +81,7 @@ public class ProfileController : Controller
         var currentUserId = User.FindFirstValue(ClaimTypes.NameIdentifier);
         if (userEdit.Id != currentUserId) return Forbid();
 
-        await editUserService.DeleteUser(userEdit.Id);
+        await _pasteUserService.DeleteUser(userEdit.Id);
         return RedirectToAction("", "Home");
     }
 
