@@ -46,7 +46,6 @@ public class RegisterService
             Email = userData.Email,
             Name = userData.Name,
             Password = passwordHash,
-            IsRegistrationComplete = true
         };
         db.Users.Add(user);
         await db.SaveChangesAsync();

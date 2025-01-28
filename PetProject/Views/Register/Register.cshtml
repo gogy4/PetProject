@@ -7,6 +7,7 @@
 
 <h1>Регистрация</h1>
 <form asp-action="Register" method="post">
+    <div asp-validation-summary="All"></div>
     <p>
         <label asp-for="Name">Имя</label><br/>
         <input type="text" asp-for="Name"/>

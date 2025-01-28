@@ -16,7 +16,6 @@ public class UserEdit
     [Compare("NewPassword", ErrorMessage = "Пароли не совпадают")]
     [DataType(DataType.Password)]
     public string PasswordConfirm { get; set; }
-    public bool IsRegistrationComplete { get; set; }
 
     public UserEdit()
     {
@@ -28,6 +27,5 @@ public class UserEdit
         Id = user.Id;
         Name = user.Name;
         Email = user.Email;
-        IsRegistrationComplete = user.IsRegistrationComplete;
     }
 }

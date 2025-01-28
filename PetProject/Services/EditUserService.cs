@@ -5,7 +5,6 @@ namespace PetProject.Services;
 
 public class EditUserService
 {
-    private bool isCalculated;
     private int Hash;
     private readonly AppDbContext db;
 
@@ -14,25 +13,19 @@ public class EditUserService
         this.db = db;
     }
     
-    public async Task<User> EditUser(UserEdit userEdit)
+    public async Task EditUser(UserEdit userEdit)
     {
        var user = await db.Users.FindAsync(userEdit.Id);
        if (!string.IsNullOrEmpty(userEdit.Name)) user.Name = userEdit.Name;
        if (!string.IsNullOrEmpty(userEdit.Email)) user.Email = userEdit.Email;
-       if (!string.IsNullOrEmpty(userEdit.NewPassword))
-       {
-           if (CheckPassword(GetHashedPassword(userEdit.Password), user.Password))
-               user.Password = GetHashedPassword(userEdit.NewPassword);
-       }
-       
+       if (CheckPassword(userEdit.NewPassword, user.Password)) user.Password = GetHashedPassword(userEdit.NewPassword);
        db.Users.Update(user);
        await db.SaveChangesAsync();
-       return user;
     }
 
-    private bool CheckPassword(int newPassword, int password)
+    public bool CheckPassword(string newPassword, int password)
     {
-        return newPassword == password;
+        return !string.IsNullOrEmpty(newPassword) && GetHashedPassword(newPassword) == password;
     }
     
     private int GetHashedPassword(string password)
@@ -40,13 +33,10 @@ public class EditUserService
         const int hash = 499;
         unchecked
         {
-            if (isCalculated) return Hash;
-
             for (var i = 0; i < password.Length - 1; i++)
                 Hash +=
                     (int)(password[i] * Math.Pow(hash, password.Length - 1 - i) + password[i + 1]);
 
-            isCalculated = true;
             return Hash;
         }
     }
@@ -59,10 +49,9 @@ public class EditUserService
         await db.SaveChangesAsync();
     }
 
-    public async Task<UserEdit> GetUser(string id)
+    public async Task<User> GetUser(string id)
     {
         var user = await db.Users.FirstOrDefaultAsync(x=>x.Id == id);
-        if (user is null) return null;
-        return new UserEdit(user);
+        return user;
     }
 }
