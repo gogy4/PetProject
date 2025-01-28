@@ -3,7 +3,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace PetProject.Models;
 
-public class UserEdit
+public class UserEdit 
 {
     public string Id { get; set; }
     public string? Name { get; set; }
@@ -16,4 +16,18 @@ public class UserEdit
     [Compare("NewPassword", ErrorMessage = "Пароли не совпадают")]
     [DataType(DataType.Password)]
     public string PasswordConfirm { get; set; }
+    public bool IsRegistrationComplete { get; set; }
+
+    public UserEdit()
+    {
+        
+    }
+
+    public UserEdit(User user)
+    {
+        Id = user.Id;
+        Name = user.Name;
+        Email = user.Email;
+        IsRegistrationComplete = user.IsRegistrationComplete;
+    }
 }

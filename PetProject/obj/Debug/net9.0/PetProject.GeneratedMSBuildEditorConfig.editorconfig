@@ -36,8 +36,12 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxpbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Rider Projects/PetProject/PetProject/Views/Paste/Delete.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFzdGVcRGVsZXRlLmNzaHRtbA==
+[D:/Rider Projects/PetProject/PetProject/Views/LogIn/LogIn.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9nSW5cTG9nSW4uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Rider Projects/PetProject/PetProject/Views/Paste/EditPaste.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFzdGVcRWRpdFBhc3RlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/Rider Projects/PetProject/PetProject/Views/Paste/GetPaste.cshtml]

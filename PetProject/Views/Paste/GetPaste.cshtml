@@ -1,15 +1,80 @@
-﻿@model PetProject.Models.TextPaste
-
-@{
-    ViewData["Title"] = "View Paste";
-}
+﻿@using System.Security.Claims
+@using Microsoft.AspNetCore.Mvc.TagHelpers
+@model PetProject.Models.TextPaste
 
 <h2>Paste Content</h2>
-<div style="white-space: pre;">@Model.Content</div>
+
+<p id="pasteContentContainer" style="white-space: pre;">@Model.Content</p>
+
 <p><small>Created at: @Model.Date</small></p>
-<p>
-    <form asp-action="Delete" method="post">
-        <input type="hidden" name="Id" value="@Model.Id"/>
+
+@if (User.Identity.IsAuthenticated && Model.UserId == User.FindFirstValue(ClaimTypes.NameIdentifier))
+{
+    <p>
+        <!-- Кнопка "Изменить пасту", при нажатии будет активировать редактирование -->
+        <button id="editPasteButton" onclick="startEditing()">Изменить пасту</button>
+    </p>
+    <p>
+    <form id="deleteForm" asp-action="Delete" method="post">
+        <input asp-for="Id" type="hidden" name="Id" value="@Model.Id"/>
         <button type="submit">Удалить пасту</button>
     </form>
-</p>
+    </p>
+}
+
+<!-- Форма для редактирования пасты (по умолчанию скрыта) -->
+<div id="editFormContainer" style="display:none;">
+    <form id="editForm" onsubmit="submitEditForm(event)">
+        <textarea name="content" id="content" rows="10" cols="50">@Model.Content</textarea>
+        <input type="hidden" name="Id" value="@Model.Id" />
+        <button type="submit">Сохранить изменения</button>
+        <button type="button" onclick="cancelEditing()">Отменить</button>
+    </form>
+</div>
+
+<script>
+    function startEditing() {
+        // Скрываем текущий контент пасты
+        document.getElementById('pasteContentContainer').style.display = 'none';
+
+        // Показываем форму редактирования
+        document.getElementById('editFormContainer').style.display = 'block';
+
+        // Меняем кнопку на "Отменить редактирование"
+        document.getElementById('editPasteButton').style.display = 'none';
+    }
+
+    function cancelEditing() {
+        // Отменяем редактирование и возвращаем оригинальный текст
+        document.getElementById('pasteContentContainer').style.display = 'block';
+        document.getElementById('editFormContainer').style.display = 'none';
+
+        // Показываем кнопку редактирования снова
+        document.getElementById('editPasteButton').style.display = 'block';
+    }
+
+    function submitEditForm(event) {
+        event.preventDefault(); // Останавливаем стандартное поведение формы
+
+        const form = event.target;
+        const formData = new FormData(form);
+
+        // Отправляем данные формы с использованием fetch
+        fetch('@Url.Action("EditPaste", "Paste", new { id = Model.Id })', {
+            method: 'POST',
+            body: formData
+        })
+            .then(response => response.text())
+            .then(updatedContent => {
+                // Обновляем содержимое пасты на странице
+                document.getElementById('pasteContentContainer').innerHTML = updatedContent;
+                // Возвращаем отображение текста пасты
+                document.getElementById('pasteContentContainer').style.display = 'block';
+                document.getElementById('editFormContainer').style.display = 'none';
+                document.getElementById('editPasteButton').style.display = 'block'; // Показываем кнопку редактирования
+            })
+            .catch(error => {
+                console.error('Ошибка:', error);
+            });
+    }
+</script>

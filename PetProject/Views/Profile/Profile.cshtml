@@ -1,11 +1,13 @@
-﻿@model PetProject.Models.UserEdit
+﻿@using Microsoft.AspNetCore.Mvc.TagHelpers
+@model PetProject.Models.UserEdit
 
 @{
     ViewData["Title"] = "Profile";
 }
 
 <form asp-action="Edit" method="post">
-    <input type="hidden" asp-for="Id" value="@ViewBag.Id"/> <!-- Добавляем скрытое поле для id -->
+    <!-- Используем Id из модели -->
+    <input type="hidden" asp-for="Id" />
 
     <p>
         <label asp-for="Name">Изменить имя</label><br/>
@@ -17,7 +19,8 @@
 </form>
 
 <form asp-action="Edit" method="post">
-    <input type="hidden" asp-for="Id" value="@ViewBag.Id"/> <!-- Добавляем скрытое поле для id -->
+    <!-- Используем Id из модели -->
+    <input type="hidden" asp-for="Id" />
 
     <p>
         <label asp-for="Email">Изменить адрес электронной почты</label><br/>
@@ -29,7 +32,8 @@
 </form>
 
 <form asp-action="Edit" method="post">
-    <input type="hidden" asp-for="Id" value="@ViewBag.Id"/> <!-- Добавляем скрытое поле для id -->
+    <!-- Используем Id из модели -->
+    <input type="hidden" asp-for="Id" />
 
     <p>
         <label asp-for="Password">Введите предыдущий пароль</label><br/>
@@ -47,6 +51,12 @@
 </form>
 
 <form asp-action="Delete" method="post">
-    <input type="hidden" name="id" value="@ViewBag.Id"/> <!-- Передаем id через скрытое поле -->
+    <!-- Используем Id из модели -->
+    <input type="hidden" name="id" asp-for="Id" />
     <input type="submit" value="Удалить пользователя"/>
+</form>
+
+<form asp-action="Logout" method="post">
+    <input type="hidden" name="id" asp-for="Id" />
+    <input type="submit" value="Выйти из аккаунта"/>
 </form>

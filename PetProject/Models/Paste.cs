@@ -9,4 +9,5 @@ public class Paste
     public DateTime Date { get; set; }
     [Required]
     public Byte[] Content { get; set; }
+    public string UserId { get; set; }
 }

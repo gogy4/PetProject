@@ -1,6 +1,49 @@
-﻿namespace PetProject.Controllers;
+﻿using System.Security.Claims;
+using Microsoft.AspNetCore.Authentication;
+using Microsoft.AspNetCore.Authentication.Cookies;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore.Metadata.Internal;
+using PetProject.Models;
+using PetProject.Services;
 
-public class LogInController
+namespace PetProject.Controllers;
+
+public class LogInController : Controller
 {
+    private LogInService logInService;
+
+    public LogInController(LogInService logInService)
+    {
+        this.logInService = logInService;
+    }
+    
+    [HttpGet]
+    [Route("/login")]
+    public async Task<IActionResult> LogIn()
+    {
+        return View();
+    }
+    
+    [HttpPost]
+    [Route("/login")]
+    public async Task<IActionResult> LogIn(string email, string password)
+    {
+        var user = await logInService.GetUser(email);
+        var logIn = await logInService.CheckCorrectPassword(user, password);
+        if (logIn)
+        {
+            var claims = new List<Claim>
+            {
+                new(ClaimTypes.NameIdentifier, user.Id)
+            };
+
+            var identity = new ClaimsIdentity(claims, CookieAuthenticationDefaults.AuthenticationScheme);
+            var principal = new ClaimsPrincipal(identity);
+            await HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme, principal);
+            return RedirectToAction("Index", "Home");
+        }
+        TempData["error"] = "Вы ввели неверные данные";
+        return RedirectToAction("Login");
+    }
     
 }

@@ -16,21 +16,18 @@ public class PasteService
         this.db = db;
     }
 
-    public async Task<Paste> CreatePasteAsync(string content)
+    public async Task<Paste> CreatePasteAsync(string content, string userId)
     {
-        string uniqueId;
+        var uniqueId = idGenerator.GenerateUniqueId();
+        while (db.Pastes.Any(x => x.Id == uniqueId)) uniqueId = idGenerator.GenerateUniqueId();
 
-        // Генерация первого уникального ID до входа в цикл
-        do
-        {
-            uniqueId = idGenerator.GenerateUniqueId();
-        } while (db.Pastes.Any(x => x.Id == uniqueId)); // Проверяем, что ID действительно уникальный
-
+        if (userId is null) userId = "Не авторизован";
         var paste = new Paste
         {
             Id = uniqueId,
             Date = DateTime.UtcNow,
-            Content = CompressString(content)
+            Content = CompressString(content),
+            UserId = userId
         };
         db.Pastes.Add(paste);
         await db.SaveChangesAsync();
@@ -39,18 +36,16 @@ public class PasteService
     }
 
 
-    public async Task<TextPaste?> GetPasteWithTextByIdAsync(string id)
+    public async Task<TextPaste?> GetPasteWithText(string id)
     {
-        var paste = await db.Pastes.FirstOrDefaultAsync(p => p.Id == id);
-        if (paste == null) return null; // Возвращаем null, если объект не найден
-
-        return new TextPaste(paste.Id, paste.Date, DecompressString(paste.Content));
+        var paste = await db.Pastes.FirstOrDefaultAsync(x => x.Id == id);
+        if (paste is null) return null;
+        return new TextPaste(paste.Id, paste.Date, DecompressString(paste.Content), paste.UserId);
     }
 
 
     public Paste GetPasteById(string id)
     {
-        var paste = db.Pastes.FirstOrDefault(p => p.Id == id);
         return db.Pastes.FirstOrDefault(p => p.Id == id);
     }
 
@@ -77,20 +72,30 @@ public class PasteService
     private string DecompressString(byte[] byteArr)
     {
         var resultString = string.Empty;
-        if (byteArr != null && byteArr.Length > 0)
-            using (var stream = new MemoryStream(byteArr))
-            using (var zip = new GZipStream(stream, CompressionMode.Decompress))
-            using (var reader = new StreamReader(zip))
-            {
-                resultString = reader.ReadToEnd();
-            }
+        if (byteArr == null || byteArr.Length <= 0) return resultString;
+        using var stream = new MemoryStream(byteArr);
+        using var zip = new GZipStream(stream, CompressionMode.Decompress);
+        using var reader = new StreamReader(zip);
+        resultString = reader.ReadToEnd();
 
         return resultString;
     }
 
-    public void DeletePaste(Paste paste)
+    public async Task DeletePaste(Paste paste)
     {
         db.Pastes.Remove(paste);
-        db.SaveChanges();
+        await db.SaveChangesAsync();
+    }
+
+    public async Task<TextPaste> EditPaste(Paste paste, string content)
+    {
+        paste.Content = CompressString(content);
+        db.Pastes.Update(paste);
+        await db.SaveChangesAsync();
+        var textPaste = new TextPaste(paste)
+        {
+            Content = content
+        };
+        return textPaste;
     }
 }

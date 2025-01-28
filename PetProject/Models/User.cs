@@ -12,4 +12,5 @@ public class User
     public string Email { get; set; } 
     [DataType(DataType.Password)]
     public int Password { get; set; }
+    public bool IsRegistrationComplete { get; set; }
 }

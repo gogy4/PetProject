@@ -1,4 +1,7 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using System.Security.Claims;
+using Microsoft.AspNetCore.Authentication;
+using Microsoft.AspNetCore.Authentication.Cookies;
+using Microsoft.AspNetCore.Mvc;
 using PetProject.Models;
 using PetProject.Services;
 
@@ -12,20 +15,31 @@ public class RegisterController : Controller
     {
         this.registerService = registerService;
     }
-    
+
     [Route("register")]
-    
     [HttpGet]
     public IActionResult Register()
     {
         return View();
     }
+
     [Route("register")]
-    [ActionName("Register")]
     [HttpPost]
     public async Task<IActionResult> RegisterToDB(UserData userData)
     {
         var user = await registerService.SaveHashedPassword(userData);
-        return RedirectToAction("Profile", "Profile", new { id = user.Id }); // передаем ID в маршрут
+
+        var claims = new List<Claim>
+        {
+            new(ClaimTypes.NameIdentifier, user.Id), 
+            new(ClaimTypes.Name, user.Name) 
+        };
+
+        var identity = new ClaimsIdentity(claims, CookieAuthenticationDefaults.AuthenticationScheme);
+        var principal = new ClaimsPrincipal(identity);
+
+        await HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme, principal);
+
+        return RedirectToAction("Profile", "Profile");
     }
 }

@@ -1,0 +1,12 @@
+﻿@model PetProject.Models.User
+
+<form method="post" asp-action="LogIn">
+    <label asp-for="Email"> Введите Email <br/>
+        <input type="email" asp-for="Email"/>
+    </label>
+    <label asp-for="Password"> Введите пароль <br/>
+        <input type="password" asp-for="Password"/>
+    </label>
+    
+    <input type="submit" value="Войти"/>
+</form>

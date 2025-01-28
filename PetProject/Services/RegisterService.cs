@@ -46,14 +46,10 @@ public class RegisterService
             Email = userData.Email,
             Name = userData.Name,
             Password = passwordHash,
+            IsRegistrationComplete = true
         };
         db.Users.Add(user);
         await db.SaveChangesAsync();
         return user;
-    }
-
-    public bool CheckPassword(string newPassword, string currentPassword)
-    {
-        return GetHashedPassword(newPassword) == GetHashedPassword(currentPassword);
     }
 }

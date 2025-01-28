@@ -29,8 +29,8 @@ public class EditUserService
        await db.SaveChangesAsync();
        return user;
     }
-    
-    public bool CheckPassword(int newPassword, int password)
+
+    private bool CheckPassword(int newPassword, int password)
     {
         return newPassword == password;
     }
@@ -57,5 +57,12 @@ public class EditUserService
         if (user is null) return;
         db.Users.Remove(user);
         await db.SaveChangesAsync();
+    }
+
+    public async Task<UserEdit> GetUser(string id)
+    {
+        var user = await db.Users.FirstOrDefaultAsync(x=>x.Id == id);
+        if (user is null) return null;
+        return new UserEdit(user);
     }
 }

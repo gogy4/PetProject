@@ -1,4 +1,6 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using System.Security.Claims;
+using Microsoft.AspNetCore.Mvc;
+using PetProject.Models;
 using PetProject.Services;
 
 namespace PetProject.Controllers;
@@ -17,19 +19,19 @@ public class PasteController : Controller
     public async Task<IActionResult> Paste(string content)
     {
         if (string.IsNullOrEmpty(content)) return BadRequest("Content cannot be null or empty.");
-
-        var pasteId = await pasteService.CreatePasteAsync(content);
-        ViewData["PasteLink"] = Url.Action("GetPaste", "Home", new { id = pasteId.Id }, Request.Scheme);
-        return RedirectToAction("GetPaste", new { id = pasteId.Id });
+        var currentUserId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+        var paste = await pasteService.CreatePasteAsync(content, currentUserId);
+        ViewData["PasteLink"] = Url.Action("GetPaste", "Home", new { id = paste.Id }, Request.Scheme);
+        return RedirectToAction("GetPaste", new { id = paste.Id});
     }
 
 
     [HttpGet]
     [Route("paste/{id}")]
-    public async Task<IActionResult> GetPaste(string id)
+    public async Task<IActionResult> GetPaste(string id, string userId)
     {
-        var paste = await pasteService.GetPasteWithTextByIdAsync(id);
-        if (paste != null) return View(paste);
+        var textPaste = await pasteService.GetPasteWithText(id);
+        if (textPaste != null) return View(textPaste);
         TempData["Message"] = "Прошлая паста была удалена или не найдена";
         return RedirectToAction("Index", "Home");
     }
@@ -39,14 +41,43 @@ public class PasteController : Controller
     public IActionResult DeleteConfirmed(string id)
     {
         var paste = pasteService.GetPasteById(id);
+
         if (paste == null)
         {
             TempData["Message"] = "Прошлая паста была удалена или не найдена";
             return RedirectToAction("Index", "Home");
         }
 
+        if (User.FindFirstValue(ClaimTypes.NameIdentifier) != paste.UserId)
+        {
+            TempData["Message"] = "Вы не можете удалить чужую пасту";
+            return RedirectToAction("Index", "Home");
+        }
+
+
         pasteService.DeletePaste(paste);
         TempData["Message"] = "Вы удалили прошлую пасту";
         return RedirectToAction("Index", "Home");
+    }
+
+    public async Task<IActionResult> EditPaste(string id, string content)
+    {
+        var paste = pasteService.GetPasteById(id);
+
+        if (paste == null)
+        {
+            TempData["Message"] = "Прошлая паста была удалена или не найдена";
+            return RedirectToAction("Index", "Home");
+        }
+
+        if (User.FindFirstValue(ClaimTypes.NameIdentifier) != paste.UserId)
+        {
+            TempData["Message"] = "Вы не можете изменять чужую пасту";
+            return RedirectToAction("Index", "Home");
+        }
+        var textPaste = await pasteService.EditPaste(paste, content);
+        
+        return PartialView(textPaste);
+        
     }
 }
