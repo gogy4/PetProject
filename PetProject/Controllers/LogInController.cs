@@ -32,7 +32,7 @@ public class LogInController : Controller
     public async Task<IActionResult> LogIn(string email, string password)
     {
         var user = await logInService.GetUser(email);
-        var logIn = await logInService.CheckCorrectPassword(user, password);
+        var logIn = await logInService.CheckPassword(user, password);
         if (logIn)
         {
             var claims = new List<Claim>

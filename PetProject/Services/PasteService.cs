@@ -1,25 +1,20 @@
-﻿using System.IO.Compression;
-using System.Text;
-using PetProject.Data;
+﻿using PetProject.Data;
 using PetProject.Models;
 using PetProject.Utils;
 
 namespace PetProject.Services;
 
-public class PasteService
+public class PasteService(AppDbContext db) : Service(db)
 {
-    private readonly AppDbContext db;
-    private readonly IdGenerator idGenerator = new();
+    private readonly PasteUtils pasteUtils = new();
 
-    public PasteService(AppDbContext db)
-    {
-        this.db = db;
-    }
 
     public async Task<Paste> CreatePasteAsync(string content, string userId, int expirationDays)
     {
-        var uniqueId = idGenerator.GenerateUniqueId();
-        while (db.Pastes.Any(x => x.Id == uniqueId)) uniqueId = idGenerator.GenerateUniqueId();
+        var uniqueId = utils.GenerateUniqueId();
+
+        await using var transaction = await db.Database.BeginTransactionAsync();
+        while (await db.Pastes.AnyAsync(x => x.Id == uniqueId)) uniqueId = utils.GenerateUniqueId();
 
         if (userId is null) userId = "Не авторизован";
 
@@ -27,25 +22,25 @@ public class PasteService
         {
             Id = uniqueId,
             Date = DateTime.UtcNow,
-            ExpirationDate = DateTime.UtcNow.AddDays(expirationDays), // Устанавливаем срок действия
-            Content = CompressString(content),
+            ExpirationDate = DateTime.UtcNow.AddDays(expirationDays),
+            Content = pasteUtils.CompressString(content),
             UserId = userId
         };
+
         db.Pastes.Add(paste);
         await db.SaveChangesAsync();
+        await transaction.CommitAsync();
 
         return paste;
     }
-
 
 
     public async Task<TextPaste?> GetPasteWithText(string id)
     {
         var paste = await db.Pastes.FirstOrDefaultAsync(x => x.Id == id && x.ExpirationDate > DateTime.UtcNow);
         if (paste is null) return null;
-        return new TextPaste(paste.Id, paste.Date, DecompressString(paste.Content), paste.UserId);
+        return new TextPaste(paste.Id, paste.Date, pasteUtils.DecompressString(paste.Content), paste.UserId);
     }
-
 
 
     public Paste GetPasteById(string id)
@@ -53,37 +48,6 @@ public class PasteService
         return db.Pastes.FirstOrDefault(p => p.Id == id);
     }
 
-    private byte[] CompressString(string content)
-    {
-        var byteArr = new byte[0];
-        if (!string.IsNullOrEmpty(content))
-        {
-            byteArr = Encoding.UTF8.GetBytes(content);
-            using (var stream = new MemoryStream())
-            {
-                using (var zip = new GZipStream(stream, CompressionMode.Compress))
-                {
-                    zip.Write(byteArr, 0, byteArr.Length);
-                }
-
-                byteArr = stream.ToArray();
-            }
-        }
-
-        return byteArr;
-    }
-
-    private string DecompressString(byte[] byteArr)
-    {
-        var resultString = string.Empty;
-        if (byteArr == null || byteArr.Length <= 0) return resultString;
-        using var stream = new MemoryStream(byteArr);
-        using var zip = new GZipStream(stream, CompressionMode.Decompress);
-        using var reader = new StreamReader(zip);
-        resultString = reader.ReadToEnd();
-
-        return resultString;
-    }
 
     public async Task DeletePaste(Paste paste)
     {
@@ -93,7 +57,7 @@ public class PasteService
 
     public async Task<TextPaste> EditPaste(Paste paste, string content)
     {
-        paste.Content = CompressString(content);
+        paste.Content = pasteUtils.CompressString(content);
         db.Pastes.Update(paste);
         await db.SaveChangesAsync();
         var textPaste = new TextPaste(paste)

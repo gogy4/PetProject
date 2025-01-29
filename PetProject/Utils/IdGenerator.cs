@@ -11,4 +11,3 @@ public class IdGenerator
             .Select(s => s[_random.Next(s.Length)]).ToArray());
     }
 }
-

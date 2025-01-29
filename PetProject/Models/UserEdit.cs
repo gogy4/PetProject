@@ -16,7 +16,7 @@ public class UserEdit
     [Compare("NewPassword", ErrorMessage = "Пароли не совпадают")]
     [DataType(DataType.Password)]
     public string PasswordConfirm { get; set; }
-
+    
     public UserEdit()
     {
         

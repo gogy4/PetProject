@@ -41,7 +41,7 @@ public class PasteController : Controller
 
     [HttpPost]
     [ActionName("Delete")]
-    public IActionResult DeleteConfirmed(string id)
+    public async Task<IActionResult> DeleteConfirmed(string id)
     {
         var paste = pasteService.GetPasteById(id);
 
@@ -58,7 +58,7 @@ public class PasteController : Controller
         }
 
 
-        pasteService.DeletePaste(paste);
+        await pasteService.DeletePaste(paste);
         TempData["Message"] = "Вы удалили прошлую пасту";
         return RedirectToAction("Index", "Home");
     }

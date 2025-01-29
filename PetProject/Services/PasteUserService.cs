@@ -3,46 +3,25 @@ using PetProject.Models;
 
 namespace PetProject.Services;
 
-public class PasteUserService
+public class PasteUserService(AppDbContext db) : Service(db)
 {
-    private readonly AppDbContext db;
-
-    public PasteUserService(AppDbContext db)
+    public bool CheckPassword(string newPassword, int confirmPassword)
     {
-        this.db = db;
+        return utils.CheckPassword(newPassword, confirmPassword);
     }
-    
+
     public async Task EditUser(UserEdit userEdit)
     {
-       var user = await db.Users.FindAsync(userEdit.Id);
-       if (!string.IsNullOrEmpty(userEdit.Name)) user.Name = userEdit.Name;
-       if (!string.IsNullOrEmpty(userEdit.Email)) user.Email = userEdit.Email;
-       if (CheckPassword(userEdit.Password, user.Password))
-           user.Password = GetHashedPassword(userEdit.NewPassword);
-       db.Users.Update(user);
-       await db.SaveChangesAsync();
+        var user = await db.Users.FindAsync(userEdit.Id);
+        if (!string.IsNullOrEmpty(userEdit.Name)) user.Name = userEdit.Name;
+        if (!string.IsNullOrEmpty(userEdit.Email)) user.Email = userEdit.Email;
+        if (utils.CheckPassword(userEdit.Password, user.Password))
+            user.Password = utils.GetHashedPassword(userEdit.NewPassword);
+        db.Users.Update(user);
+        await db.SaveChangesAsync();
     }
 
-    public bool CheckPassword(string newPassword, int password)
-    {
-        return !string.IsNullOrEmpty(newPassword) && GetHashedPassword(newPassword) == password;
-    }
-    
-    private int GetHashedPassword(string password)
-    {
-        const int hash = 499;
-        var hashPassword = 0;
-        unchecked
-        {
-            for (var i = 0; i < password.Length - 1; i++)
-                hashPassword +=
-                    (int)(password[i] * Math.Pow(hash, password.Length - 1 - i) + password[i + 1]);
 
-            
-            return hashPassword;
-        }
-    }
-    
     public async Task DeleteUser(string id)
     {
         var user = await db.Users.FindAsync(id);
@@ -53,7 +32,11 @@ public class PasteUserService
 
     public async Task<User> GetUser(string id)
     {
-        var user = await db.Users.FirstOrDefaultAsync(x=>x.Id == id);
-        return user;
+        return await utils.GetUser(db, id: id);
+    }
+
+    public List<Paste> GetPastesByUserId(string userId)
+    {
+        return db.Pastes.Where(x => x.UserId == userId).ToList();
     }
 }

@@ -3,6 +3,7 @@ using Microsoft.EntityFrameworkCore;
 using PetProject.Data;
 using PetProject.Models;
 using PetProject.Services;
+using PetProject.Utils;
 
 var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllersWithViews();
@@ -10,6 +11,10 @@ builder.Services.AddScoped<PasteService>();
 builder.Services.AddScoped<RegisterService>();
 builder.Services.AddScoped<PasteUserService>();
 builder.Services.AddScoped<LogInService>();
+// Настройка логирования
+builder.Logging.ClearProviders(); // Удалить все стандартные провайдеры
+builder.Logging.AddConsole(); // Добавить консольный логер
+builder.Logging.AddDebug();   // Добавить логирование для отладки
 builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
     .AddCookie(options =>
     {

@@ -1,4 +1,4 @@
-﻿using System.Security.Claims;
+﻿﻿using System.Security.Claims;
 using System.Text.RegularExpressions;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authentication.Cookies;
@@ -29,7 +29,7 @@ public class RegisterController : Controller
 
     [Route("register")]
     [HttpPost]
-    public async Task<IActionResult> RegisterToDB(UserData userData)
+    public async Task<IActionResult> RegisterToDB(UserEdit userData)
     {
         var error = false;
         if (await registerService.CheckEmail(userData.Email))

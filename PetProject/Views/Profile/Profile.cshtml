@@ -1,20 +1,20 @@
 ﻿@using Microsoft.AspNetCore.Mvc.TagHelpers
-@model PetProject.Models.UserEdit
+@model PetProject.Models.ProfileViewModel
 
 @{
     ViewData["Title"] = "Profile";
 }
 
 <form asp-action="Edit" method="post">
-    <input type="hidden" asp-for="Id" />
-    <input type="hidden" asp-for="Email" />
-    <input type="hidden" asp-for="Password" />
-    <input type="hidden" asp-for="NewPassword" />
-    <input type="hidden" asp-for="PasswordConfirm" />
+    <input type="hidden" asp-for="User.Name" />
+    <input type="hidden" asp-for="User.Email" />
+    <input type="hidden" asp-for="User.Password" />
+    <input type="hidden" asp-for="User.NewPassword" />
+    <input type="hidden" asp-for="User.PasswordConfirm" />
 
     <p>
-        <label asp-for="Name">Изменить имя</label><br/>
-        <input type="text" asp-for="Name"/>
+        <label asp-for="User.Name">Изменить имя</label><br/>
+        <input type="text" asp-for="User.Name"/>
     </p>
 
     <p>
@@ -23,15 +23,15 @@
 </form>
 
 <form asp-action="Edit" method="post">
-    <input type="hidden" asp-for="Id" />
-    <input type="hidden" asp-for="Name" />
-    <input type="hidden" asp-for="Password" />
-    <input type="hidden" asp-for="NewPassword" />
-    <input type="hidden" asp-for="PasswordConfirm" />
+    <input type="hidden" asp-for="User.Id" />
+    <input type="hidden" asp-for="User.Name" />
+    <input type="hidden" asp-for="User.Password" />
+    <input type="hidden" asp-for="User.NewPassword" />
+    <input type="hidden" asp-for="User.PasswordConfirm" />
 
     <p>
-        <label asp-for="Email">Изменить адрес электронной почты</label><br/>
-        <input type="email" asp-for="Email"/>
+        <label asp-for="User.Email">Изменить адрес электронной почты</label><br/>
+        <input type="email" asp-for="User.Email"/>
     </p>
 
     <p>
@@ -41,23 +41,23 @@
 
 <form asp-action="Edit" method="post">
     <div asp-validation-summary="All"></div>
-    <input type="hidden" asp-for="Id" />
-    <input type="hidden" asp-for="Name" />
-    <input type="hidden" asp-for="Email" />
+    <input type="hidden" asp-for="User.Id" />
+    <input type="hidden" asp-for="User.Name" />
+    <input type="hidden" asp-for="User.Email" />
 
     <p>
-        <label asp-for="Password">Введите предыдущий пароль</label><br/>
-        <input type="password" asp-for="Password"/>
+        <label asp-for="User.Password">Введите предыдущий пароль</label><br/>
+        <input type="password" asp-for="User.Password"/>
     </p>
 
     <p>
-        <label asp-for="NewPassword">Новый пароль</label><br/>
-        <input type="password" asp-for="NewPassword"/>
+        <label asp-for="User.NewPassword">Новый пароль</label><br/>
+        <input type="password" asp-for="User.NewPassword"/>
     </p>
 
     <p>
-        <label asp-for="PasswordConfirm">Подтвердите пароль</label><br/>
-        <input type="password" asp-for="PasswordConfirm"/>
+        <label asp-for="User.PasswordConfirm">Подтвердите пароль</label><br/>
+        <input type="password" asp-for="User.PasswordConfirm"/>
     </p>
 
     <p>
@@ -65,13 +65,33 @@
     </p>
 </form>
 
+<h3>Ваши пасты</h3>
+
+@if (Model.Pastes.Any())
+{
+    <ul>
+        @foreach (var paste in Model.Pastes)
+        {
+            <li>
+                <strong>@paste.Id</strong> - @paste.Date.ToShortDateString()
+                <br/>
+                <a asp-controller="Paste" asp-action="GetPaste" asp-route-id="@paste.Id">Открыть</a>
+            </li>
+        }
+    </ul>
+}
+else
+{
+    <p>У вас нет паст</p>
+}
+
 <form asp-action="Delete" method="post">
-    <input type="hidden" name="id" asp-for="Id" />
+    <input type="hidden" name="id" asp-for="User.Id" />
     <input type="submit" value="Удалить пользователя"/>
 </form>
 
 <form asp-action="Logout" method="post">
-    <input type="hidden" name="id" asp-for="Id" />
+    <input type="hidden" name="id" asp-for="User.Id" />
     <input type="submit" value="Выйти из аккаунта"/>
 </form>
 

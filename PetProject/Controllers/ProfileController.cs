@@ -11,11 +11,11 @@ namespace PetProject.Controllers;
 [Route("profile")]
 public class ProfileController : Controller
 {
-    private readonly PasteUserService _pasteUserService;
+    private readonly PasteUserService pasteUserService;
 
     public ProfileController(PasteUserService pasteUserService)
     {
-        this._pasteUserService = pasteUserService;
+        this.pasteUserService = pasteUserService;
     }
 
     [HttpGet]
@@ -23,14 +23,20 @@ public class ProfileController : Controller
     public async Task<IActionResult> Profile()
     {
         var currentUserId = User.FindFirstValue(ClaimTypes.NameIdentifier);
-
+ 
         if (string.IsNullOrEmpty(currentUserId)) return RedirectToAction("Register", "Register");
-
-        var user = await _pasteUserService.GetUser(currentUserId);
-
+ 
+        var user =  await pasteUserService.GetUser(currentUserId);
+        var pastes =  pasteUserService.GetPastesByUserId(currentUserId);
+ 
         if (user == null) return RedirectToAction("Register", "Register");
-
-        return View(new UserEdit(user));
+ 
+        var viewModel = new ProfileViewModel
+        {
+            User = new UserEdit(user),
+            Pastes = pastes
+        };
+        return View(viewModel);
     }
 
 
@@ -62,17 +68,25 @@ public class ProfileController : Controller
                 error = true;
             }
 
-            var user = await _pasteUserService.GetUser(userEdit.Id);
-            var passwordCorrect = _pasteUserService.CheckPassword(userEdit.Password, user.Password);
+            var user = await pasteUserService.GetUser(userEdit.Id);
+            var passwordCorrect = pasteUserService.CheckPassword(userEdit.Password, user.Password);
             if (!passwordCorrect)
             {
                 ModelState.AddModelError("Password", "Вы ввели неверный прошлый пароль");
                 error = true;
             }
         }
+        var currentUserId = User.FindFirstValue(ClaimTypes.NameIdentifier);
 
-        if (error) return View("Profile", userEdit);
-        await _pasteUserService.EditUser(userEdit);
+        var pastes =  pasteUserService.GetPastesByUserId(currentUserId);
+
+        var viewModel = new ProfileViewModel
+        {
+            User = userEdit,
+            Pastes = pastes
+        };
+        if (error) return View("Profile", viewModel);
+        await pasteUserService.EditUser(userEdit);
         return RedirectToAction("Profile");
     }
 
@@ -81,7 +95,7 @@ public class ProfileController : Controller
         var currentUserId = User.FindFirstValue(ClaimTypes.NameIdentifier);
         if (userEdit.Id != currentUserId) return Forbid();
 
-        await _pasteUserService.DeleteUser(userEdit.Id);
+        await pasteUserService.DeleteUser(userEdit.Id);
         return RedirectToAction("", "Home");
     }
 
