@@ -6,10 +6,36 @@
 </head>
 <body>
 <h2>@ViewBag.Title</h2>
-<div><a href="/">Home</a>
+<div>
+    @if (Context.Request.Path != "/")
+    {
+        <a href="/">Home</a>
+    }
+</div>
+<div>
+    @if (Context.Request.Path != "/profile") 
+    {
+        <a href="/profile">Profile</a>
+    }
+</div>
+<div>
+    @if (Context.Request.Path != "/register" && !User.Identity.IsAuthenticated)
+    {
+        <a href="/register">Register</a>
+    }
+</div>
+<div>
+    @if (Context.Request.Path != "/login" && !User.Identity.IsAuthenticated)
+    {
+        <a href="/login">Login</a>
+    }
 </div>
 <div>
     @RenderBody()
 </div>
+
+<!-- Подключение глобального JS -->
+<script src="~/editor.js" asp-append-version="true"></script>
+
 </body>
 </html>

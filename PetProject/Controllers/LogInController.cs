@@ -32,6 +32,11 @@ public class LogInController : Controller
     public async Task<IActionResult> LogIn(string email, string password)
     {
         var user = await logInService.GetUser(email);
+        if (user is null)
+        {
+            TempData["error"] = "Пользователь с такой почтой не найден";
+            return RedirectToAction("Login");
+        }
         var logIn = await logInService.CheckPassword(user, password);
         if (logIn)
         {

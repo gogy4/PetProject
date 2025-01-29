@@ -119,3 +119,5 @@ D:\Rider Projects\PetProject\PetProject\bin\Debug\net9.0\tr\Microsoft.CodeAnalys
 D:\Rider Projects\PetProject\PetProject\bin\Debug\net9.0\zh-Hans\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
 D:\Rider Projects\PetProject\PetProject\bin\Debug\net9.0\zh-Hant\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
 D:\Rider Projects\PetProject\PetProject\obj\Debug\net9.0\PetProject.sourcelink.json
+D:\Rider Projects\PetProject\PetProject\bin\Debug\net9.0\PetProject.staticwebassets.runtime.json
+D:\Rider Projects\PetProject\PetProject\obj\Debug\net9.0\compressed\uxucma3h0q-f35gg7w3ze.gz

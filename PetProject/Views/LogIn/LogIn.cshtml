@@ -1,5 +1,10 @@
 ﻿@model PetProject.Models.User
-
+@if (TempData["error"] is not null)
+{
+    <div>
+        @TempData["error"]
+    </div>
+}
 <form method="post" asp-action="LogIn">
     <label asp-for="Email"> Введите Email <br/>
         <input type="email" asp-for="Email"/>

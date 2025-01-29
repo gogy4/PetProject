@@ -1,12 +1,362 @@
 {
   "Version": 1,
-  "Hash": "ERmwVk017uvmN9E5Px9WCQj9L491ZcctGKnOwu4EZB8=",
+  "Hash": "/jfGzcBSlAYcX0a8EeMMx0C0dFFfbmppFTixgnx3QKs=",
   "Source": "PetProject",
   "BasePath": "_content/PetProject",
   "Mode": "Default",
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [],
-  "DiscoveryPatterns": [],
-  "Assets": [],
-  "Endpoints": []
+  "DiscoveryPatterns": [
+    {
+      "Name": "PetProject\\wwwroot",
+      "Source": "PetProject",
+      "ContentRoot": "D:\\Rider Projects\\PetProject\\PetProject\\wwwroot\\",
+      "BasePath": "_content/PetProject",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "D:\\Rider Projects\\PetProject\\PetProject\\obj\\Debug\\net9.0\\compressed\\uxucma3h0q-f35gg7w3ze.gz",
+      "SourceId": "PetProject",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Rider Projects\\PetProject\\PetProject\\obj\\Debug\\net9.0\\compressed\\",
+      "BasePath": "_content/PetProject",
+      "RelativePath": "editor#[.{fingerprint=f35gg7w3ze}]?.js.gz",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "D:\\Rider Projects\\PetProject\\PetProject\\wwwroot\\editor.js",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "Fingerprint": "piu3neiirs",
+      "Integrity": "vzPgtGeSduzUZpebG6c1WU39c5v1wYrd3lzt8qPl2IE=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "D:\\Rider Projects\\PetProject\\PetProject\\wwwroot\\editor.js"
+    },
+    {
+      "Identity": "D:\\Rider Projects\\PetProject\\PetProject\\wwwroot\\editor.js",
+      "SourceId": "PetProject",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Rider Projects\\PetProject\\PetProject\\wwwroot\\",
+      "BasePath": "_content/PetProject",
+      "RelativePath": "editor#[.{fingerprint}]?.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "f35gg7w3ze",
+      "Integrity": "y8nn2ORfIGBXSfsSyZ9XUXDmQdRkpolBFZBs8OYIA5g=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\editor.js"
+    }
+  ],
+  "Endpoints": [
+    {
+      "Route": "editor.f35gg7w3ze.js",
+      "AssetFile": "D:\\Rider Projects\\PetProject\\PetProject\\obj\\Debug\\net9.0\\compressed\\uxucma3h0q-f35gg7w3ze.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.001745200698"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "572"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"vzPgtGeSduzUZpebG6c1WU39c5v1wYrd3lzt8qPl2IE=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 29 Jan 2025 17:44:48 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"y8nn2ORfIGBXSfsSyZ9XUXDmQdRkpolBFZBs8OYIA5g=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "f35gg7w3ze"
+        },
+        {
+          "Name": "label",
+          "Value": "editor.js"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-y8nn2ORfIGBXSfsSyZ9XUXDmQdRkpolBFZBs8OYIA5g="
+        }
+      ]
+    },
+    {
+      "Route": "editor.f35gg7w3ze.js",
+      "AssetFile": "D:\\Rider Projects\\PetProject\\PetProject\\wwwroot\\editor.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1789"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"y8nn2ORfIGBXSfsSyZ9XUXDmQdRkpolBFZBs8OYIA5g=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 29 Jan 2025 17:44:48 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "f35gg7w3ze"
+        },
+        {
+          "Name": "label",
+          "Value": "editor.js"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-y8nn2ORfIGBXSfsSyZ9XUXDmQdRkpolBFZBs8OYIA5g="
+        }
+      ]
+    },
+    {
+      "Route": "editor.f35gg7w3ze.js.gz",
+      "AssetFile": "D:\\Rider Projects\\PetProject\\PetProject\\obj\\Debug\\net9.0\\compressed\\uxucma3h0q-f35gg7w3ze.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "572"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"vzPgtGeSduzUZpebG6c1WU39c5v1wYrd3lzt8qPl2IE=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 29 Jan 2025 17:44:48 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "f35gg7w3ze"
+        },
+        {
+          "Name": "label",
+          "Value": "editor.js.gz"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-vzPgtGeSduzUZpebG6c1WU39c5v1wYrd3lzt8qPl2IE="
+        }
+      ]
+    },
+    {
+      "Route": "editor.js",
+      "AssetFile": "D:\\Rider Projects\\PetProject\\PetProject\\obj\\Debug\\net9.0\\compressed\\uxucma3h0q-f35gg7w3ze.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.001745200698"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "572"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"vzPgtGeSduzUZpebG6c1WU39c5v1wYrd3lzt8qPl2IE=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 29 Jan 2025 17:44:48 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"y8nn2ORfIGBXSfsSyZ9XUXDmQdRkpolBFZBs8OYIA5g=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-y8nn2ORfIGBXSfsSyZ9XUXDmQdRkpolBFZBs8OYIA5g="
+        }
+      ]
+    },
+    {
+      "Route": "editor.js",
+      "AssetFile": "D:\\Rider Projects\\PetProject\\PetProject\\wwwroot\\editor.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1789"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"y8nn2ORfIGBXSfsSyZ9XUXDmQdRkpolBFZBs8OYIA5g=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 29 Jan 2025 17:44:48 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-y8nn2ORfIGBXSfsSyZ9XUXDmQdRkpolBFZBs8OYIA5g="
+        }
+      ]
+    },
+    {
+      "Route": "editor.js.gz",
+      "AssetFile": "D:\\Rider Projects\\PetProject\\PetProject\\obj\\Debug\\net9.0\\compressed\\uxucma3h0q-f35gg7w3ze.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "572"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"vzPgtGeSduzUZpebG6c1WU39c5v1wYrd3lzt8qPl2IE=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 29 Jan 2025 17:44:48 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-vzPgtGeSduzUZpebG6c1WU39c5v1wYrd3lzt8qPl2IE="
+        }
+      ]
+    }
+  ]
 }

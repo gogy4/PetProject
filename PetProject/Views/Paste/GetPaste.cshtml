@@ -59,6 +59,15 @@
         const form = event.target;
         const formData = new FormData(form);
 
+        // Получаем содержимое текстового поля
+        const content = formData.get('content').trim();
+
+        // Проверяем, если текст пустой
+        if (content === "") {
+            alert("Ошибка: паста не может быть пустой или состоять только из пробелов.");
+            return; // Останавливаем отправку формы
+        }
+
         // Отправляем данные формы с использованием fetch
         fetch('@Url.Action("EditPaste", "Paste", new { id = Model.Id })', {
             method: 'POST',
@@ -66,12 +75,17 @@
         })
             .then(response => response.text())
             .then(updatedContent => {
-                // Обновляем содержимое пасты на странице
-                document.getElementById('pasteContentContainer').innerHTML = updatedContent;
-                // Возвращаем отображение текста пасты
-                document.getElementById('pasteContentContainer').style.display = 'block';
-                document.getElementById('editFormContainer').style.display = 'none';
-                document.getElementById('editPasteButton').style.display = 'block'; // Показываем кнопку редактирования
+                // Если ответ содержит сообщение об ошибке, показываем его
+                if (updatedContent.includes("Паста не может быть пустой")) {
+                    alert("Ошибка: паста не может быть пустой или состоять только из пробелов.");
+                } else {
+                    // Обновляем содержимое пасты на странице
+                    document.getElementById('pasteContentContainer').innerHTML = updatedContent;
+                    // Возвращаем отображение текста пасты
+                    document.getElementById('pasteContentContainer').style.display = 'block';
+                    document.getElementById('editFormContainer').style.display = 'none';
+                    document.getElementById('editPasteButton').style.display = 'block'; // Показываем кнопку редактирования
+                }
             })
             .catch(error => {
                 console.error('Ошибка:', error);
