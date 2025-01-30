@@ -126,4 +126,10 @@ public class ProfileController : Controller
 
         return RedirectToAction("Index", "Home");
     }
+    [Route("DeletePaste")]
+    public async Task<IActionResult> DeleteConfirmed(string id)
+    {
+        await pasteUserService.DeletePaste(id);
+        return RedirectToAction("Profile");
+    }
 }

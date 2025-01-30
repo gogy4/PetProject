@@ -81,6 +81,8 @@
                 <strong class="paste-id">@paste.Id</strong> - @paste.Date.ToShortDateString()
                 <br/>
                 <a asp-controller="Paste" asp-action="GetPaste" asp-route-id="@paste.Id" class="open-paste-link">Открыть</a>
+                <a asp-action="DeleteConfirmed" asp-route-id="@paste.Id" class="open-paste-link">Удалить</a>
+
             </li>
         }
     </ul>

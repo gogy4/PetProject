@@ -34,6 +34,7 @@ builder.Services.AddDbContext<AppDbContext>(options =>
 {
     options.UseMySql(connection, ServerVersion.AutoDetect(connection));
 });
+
 builder.Services.AddHostedService<CleanupService>();
 var app = builder.Build();
 

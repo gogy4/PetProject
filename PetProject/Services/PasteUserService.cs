@@ -46,4 +46,11 @@ public class PasteUserService(AppDbContext db) : Service(db)
         db.Pastes.RemoveRange(pastes);
         await db.SaveChangesAsync();
     }
+    
+    public async Task DeletePaste(string id)
+    {
+        var paste = await db.Pastes.FirstOrDefaultAsync(p => p.Id == id);
+        db.Pastes.Remove(paste);
+        await db.SaveChangesAsync();
+    }
 }

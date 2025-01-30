@@ -160,6 +160,7 @@
 /* Стили для формы выхода */
 .logout-form {
     text-align: center;
+    margin-bottom: 20px;
 }
 
 /* Стили для скрытых полей ввода */
