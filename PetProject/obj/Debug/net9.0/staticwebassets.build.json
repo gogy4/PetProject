@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "/jfGzcBSlAYcX0a8EeMMx0C0dFFfbmppFTixgnx3QKs=",
+  "Hash": "T2Ia67qYqopMPKeuWu5dHT9YYXlkp6Wj2xdpnizy+LE=",
   "Source": "PetProject",
   "BasePath": "_content/PetProject",
   "Mode": "Default",
@@ -17,33 +17,159 @@
   ],
   "Assets": [
     {
-      "Identity": "D:\\Rider Projects\\PetProject\\PetProject\\obj\\Debug\\net9.0\\compressed\\uxucma3h0q-f35gg7w3ze.gz",
+      "Identity": "D:\\Rider Projects\\PetProject\\PetProject\\obj\\Debug\\net9.0\\compressed\\12ouk1i1de-k9w9n2ftm6.gz",
       "SourceId": "PetProject",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\Rider Projects\\PetProject\\PetProject\\obj\\Debug\\net9.0\\compressed\\",
       "BasePath": "_content/PetProject",
-      "RelativePath": "editor#[.{fingerprint=f35gg7w3ze}]?.js.gz",
+      "RelativePath": "css/profile#[.{fingerprint=k9w9n2ftm6}]?.css.gz",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Alternative",
       "AssetMergeBehavior": "",
       "AssetMergeSource": "",
-      "RelatedAsset": "D:\\Rider Projects\\PetProject\\PetProject\\wwwroot\\editor.js",
+      "RelatedAsset": "D:\\Rider Projects\\PetProject\\PetProject\\wwwroot\\css\\profile.css",
       "AssetTraitName": "Content-Encoding",
       "AssetTraitValue": "gzip",
-      "Fingerprint": "piu3neiirs",
-      "Integrity": "vzPgtGeSduzUZpebG6c1WU39c5v1wYrd3lzt8qPl2IE=",
+      "Fingerprint": "do7mg2pjji",
+      "Integrity": "o4f+1beos0r+ZbFBn+jIbBXR5QA0ebCseJfHGAITWn4=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "D:\\Rider Projects\\PetProject\\PetProject\\wwwroot\\editor.js"
+      "OriginalItemSpec": "D:\\Rider Projects\\PetProject\\PetProject\\wwwroot\\css\\profile.css"
     },
     {
-      "Identity": "D:\\Rider Projects\\PetProject\\PetProject\\wwwroot\\editor.js",
+      "Identity": "D:\\Rider Projects\\PetProject\\PetProject\\obj\\Debug\\net9.0\\compressed\\9daf7d13g1-hcpys412ev.gz",
+      "SourceId": "PetProject",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Rider Projects\\PetProject\\PetProject\\obj\\Debug\\net9.0\\compressed\\",
+      "BasePath": "_content/PetProject",
+      "RelativePath": "css/login#[.{fingerprint=hcpys412ev}]?.css.gz",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "D:\\Rider Projects\\PetProject\\PetProject\\wwwroot\\css\\login.css",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "Fingerprint": "yzf9l68vmj",
+      "Integrity": "wvnqDU0tyrjOabYI/uzVj8YOm0cewbD/XY4H4vlx7UE=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "D:\\Rider Projects\\PetProject\\PetProject\\wwwroot\\css\\login.css"
+    },
+    {
+      "Identity": "D:\\Rider Projects\\PetProject\\PetProject\\obj\\Debug\\net9.0\\compressed\\czxl30myjr-uvn6wpuc2f.gz",
+      "SourceId": "PetProject",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Rider Projects\\PetProject\\PetProject\\obj\\Debug\\net9.0\\compressed\\",
+      "BasePath": "_content/PetProject",
+      "RelativePath": "css/index#[.{fingerprint=uvn6wpuc2f}]?.css.gz",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "D:\\Rider Projects\\PetProject\\PetProject\\wwwroot\\css\\index.css",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "Fingerprint": "6gkppsjyp8",
+      "Integrity": "OnPnA/6oycXox9YX5nTsLYbsKPniSTzKDlmWvd8n1QE=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "D:\\Rider Projects\\PetProject\\PetProject\\wwwroot\\css\\index.css"
+    },
+    {
+      "Identity": "D:\\Rider Projects\\PetProject\\PetProject\\obj\\Debug\\net9.0\\compressed\\ie6swvk3ty-wdlsmzn2t8.gz",
+      "SourceId": "PetProject",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Rider Projects\\PetProject\\PetProject\\obj\\Debug\\net9.0\\compressed\\",
+      "BasePath": "_content/PetProject",
+      "RelativePath": "css/register#[.{fingerprint=wdlsmzn2t8}]?.css.gz",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "D:\\Rider Projects\\PetProject\\PetProject\\wwwroot\\css\\register.css",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "Fingerprint": "fetsbup2wx",
+      "Integrity": "KUlpT83D8QmFDisSTvSJwHnDHc71fXd0jkvjtETeoNc=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "D:\\Rider Projects\\PetProject\\PetProject\\wwwroot\\css\\register.css"
+    },
+    {
+      "Identity": "D:\\Rider Projects\\PetProject\\PetProject\\obj\\Debug\\net9.0\\compressed\\ust90vw9u9-14ma0dv4qu.gz",
+      "SourceId": "PetProject",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Rider Projects\\PetProject\\PetProject\\obj\\Debug\\net9.0\\compressed\\",
+      "BasePath": "_content/PetProject",
+      "RelativePath": "css/paste#[.{fingerprint=14ma0dv4qu}]?.css.gz",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "D:\\Rider Projects\\PetProject\\PetProject\\wwwroot\\css\\paste.css",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "Fingerprint": "tbngepazib",
+      "Integrity": "5/PLAL1zEuLN9YtL1Z2qy1Rqflm0DeZCMzcl7djM45o=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "D:\\Rider Projects\\PetProject\\PetProject\\wwwroot\\css\\paste.css"
+    },
+    {
+      "Identity": "D:\\Rider Projects\\PetProject\\PetProject\\obj\\Debug\\net9.0\\compressed\\wkac5ji5qp-vg6ulqq70p.gz",
+      "SourceId": "PetProject",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Rider Projects\\PetProject\\PetProject\\obj\\Debug\\net9.0\\compressed\\",
+      "BasePath": "_content/PetProject",
+      "RelativePath": "css/style#[.{fingerprint=vg6ulqq70p}]?.css.gz",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "D:\\Rider Projects\\PetProject\\PetProject\\wwwroot\\css\\style.css",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "Fingerprint": "2r0j4sogy2",
+      "Integrity": "jn4FcrTNlh8JV6wA2eMQB/kDaPpy0WpVoDXLUfH1Dtc=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "D:\\Rider Projects\\PetProject\\PetProject\\wwwroot\\css\\style.css"
+    },
+    {
+      "Identity": "D:\\Rider Projects\\PetProject\\PetProject\\obj\\Debug\\net9.0\\compressed\\xdccaravbk-51pbzu2a68.gz",
+      "SourceId": "PetProject",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Rider Projects\\PetProject\\PetProject\\obj\\Debug\\net9.0\\compressed\\",
+      "BasePath": "_content/PetProject",
+      "RelativePath": "js/validations#[.{fingerprint=51pbzu2a68}]?.js.gz",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "D:\\Rider Projects\\PetProject\\PetProject\\wwwroot\\js\\validations.js",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "Fingerprint": "2cutw0qhs2",
+      "Integrity": "LsFIkO9S/4+4IPV5YkaPPmWrev2C/6NO9L+1L1quMBc=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "D:\\Rider Projects\\PetProject\\PetProject\\wwwroot\\js\\validations.js"
+    },
+    {
+      "Identity": "D:\\Rider Projects\\PetProject\\PetProject\\wwwroot\\css\\index.css",
       "SourceId": "PetProject",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\Rider Projects\\PetProject\\PetProject\\wwwroot\\",
       "BasePath": "_content/PetProject",
-      "RelativePath": "editor#[.{fingerprint}]?.js",
+      "RelativePath": "css/index#[.{fingerprint}]?.css",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -52,22 +178,148 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "f35gg7w3ze",
-      "Integrity": "y8nn2ORfIGBXSfsSyZ9XUXDmQdRkpolBFZBs8OYIA5g=",
+      "Fingerprint": "uvn6wpuc2f",
+      "Integrity": "asIfNKn+4kMgjUFxuoT0Acx62zM2nZHjE/UcGriG1dg=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\editor.js"
+      "OriginalItemSpec": "wwwroot\\css\\index.css"
+    },
+    {
+      "Identity": "D:\\Rider Projects\\PetProject\\PetProject\\wwwroot\\css\\login.css",
+      "SourceId": "PetProject",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Rider Projects\\PetProject\\PetProject\\wwwroot\\",
+      "BasePath": "_content/PetProject",
+      "RelativePath": "css/login#[.{fingerprint}]?.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "hcpys412ev",
+      "Integrity": "0XAmaWSqzqB1ebs1unOK1Xie8xgQvsyj3C152IW4W/o=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\login.css"
+    },
+    {
+      "Identity": "D:\\Rider Projects\\PetProject\\PetProject\\wwwroot\\css\\paste.css",
+      "SourceId": "PetProject",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Rider Projects\\PetProject\\PetProject\\wwwroot\\",
+      "BasePath": "_content/PetProject",
+      "RelativePath": "css/paste#[.{fingerprint}]?.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "14ma0dv4qu",
+      "Integrity": "cdKv+o4w6ZwqKnLaPIhqgXBXUq/dwx1FMdmaDbnLk90=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\paste.css"
+    },
+    {
+      "Identity": "D:\\Rider Projects\\PetProject\\PetProject\\wwwroot\\css\\profile.css",
+      "SourceId": "PetProject",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Rider Projects\\PetProject\\PetProject\\wwwroot\\",
+      "BasePath": "_content/PetProject",
+      "RelativePath": "css/profile#[.{fingerprint}]?.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "k9w9n2ftm6",
+      "Integrity": "mPo2j9uOXsdXqbzNh0jzK3n2a34eOENvJLky5NoKZNY=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\profile.css"
+    },
+    {
+      "Identity": "D:\\Rider Projects\\PetProject\\PetProject\\wwwroot\\css\\register.css",
+      "SourceId": "PetProject",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Rider Projects\\PetProject\\PetProject\\wwwroot\\",
+      "BasePath": "_content/PetProject",
+      "RelativePath": "css/register#[.{fingerprint}]?.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "wdlsmzn2t8",
+      "Integrity": "vHIP8/YOLsGGqFO7WbmXJday8a8ULy8n+zeqzGG5dhI=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\register.css"
+    },
+    {
+      "Identity": "D:\\Rider Projects\\PetProject\\PetProject\\wwwroot\\css\\style.css",
+      "SourceId": "PetProject",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Rider Projects\\PetProject\\PetProject\\wwwroot\\",
+      "BasePath": "_content/PetProject",
+      "RelativePath": "css/style#[.{fingerprint}]?.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "vg6ulqq70p",
+      "Integrity": "P7nj1JKM5iMs07fQFlp3nMJXVRB/u9O8liiKnxlFdn8=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\style.css"
+    },
+    {
+      "Identity": "D:\\Rider Projects\\PetProject\\PetProject\\wwwroot\\js\\validations.js",
+      "SourceId": "PetProject",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Rider Projects\\PetProject\\PetProject\\wwwroot\\",
+      "BasePath": "_content/PetProject",
+      "RelativePath": "js/validations#[.{fingerprint}]?.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "51pbzu2a68",
+      "Integrity": "h9GkDyiavcb4PH9Dhf7gZeBi+58a1FfGuPRYo30NJVE=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\validations.js"
     }
   ],
   "Endpoints": [
     {
-      "Route": "editor.f35gg7w3ze.js",
-      "AssetFile": "D:\\Rider Projects\\PetProject\\PetProject\\obj\\Debug\\net9.0\\compressed\\uxucma3h0q-f35gg7w3ze.gz",
+      "Route": "css/index.css",
+      "AssetFile": "D:\\Rider Projects\\PetProject\\PetProject\\obj\\Debug\\net9.0\\compressed\\czxl30myjr-uvn6wpuc2f.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
           "Value": "gzip",
-          "Quality": "0.001745200698"
+          "Quality": "0.001001001001"
         }
       ],
       "ResponseHeaders": [
@@ -77,19 +329,19 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "572"
+          "Value": "998"
         },
         {
           "Name": "ETag",
-          "Value": "\"vzPgtGeSduzUZpebG6c1WU39c5v1wYrd3lzt8qPl2IE=\""
+          "Value": "\"OnPnA/6oycXox9YX5nTsLYbsKPniSTzKDlmWvd8n1QE=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 29 Jan 2025 17:44:48 GMT"
+          "Value": "Thu, 30 Jan 2025 07:06:46 GMT"
         },
         {
           "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
+          "Value": "no-cache"
         },
         {
           "Name": "Content-Encoding",
@@ -101,31 +353,23 @@
         },
         {
           "Name": "Content-Type",
-          "Value": "text/javascript"
+          "Value": "text/css"
         },
         {
           "Name": "ETag",
-          "Value": "W/\"y8nn2ORfIGBXSfsSyZ9XUXDmQdRkpolBFZBs8OYIA5g=\""
+          "Value": "W/\"asIfNKn+4kMgjUFxuoT0Acx62zM2nZHjE/UcGriG1dg=\""
         }
       ],
       "EndpointProperties": [
         {
-          "Name": "fingerprint",
-          "Value": "f35gg7w3ze"
-        },
-        {
-          "Name": "label",
-          "Value": "editor.js"
-        },
-        {
           "Name": "integrity",
-          "Value": "sha256-y8nn2ORfIGBXSfsSyZ9XUXDmQdRkpolBFZBs8OYIA5g="
+          "Value": "sha256-asIfNKn+4kMgjUFxuoT0Acx62zM2nZHjE/UcGriG1dg="
         }
       ]
     },
     {
-      "Route": "editor.f35gg7w3ze.js",
-      "AssetFile": "D:\\Rider Projects\\PetProject\\PetProject\\wwwroot\\editor.js",
+      "Route": "css/index.css",
+      "AssetFile": "D:\\Rider Projects\\PetProject\\PetProject\\wwwroot\\css\\index.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -134,43 +378,35 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "1789"
+          "Value": "2754"
         },
         {
           "Name": "Content-Type",
-          "Value": "text/javascript"
+          "Value": "text/css"
         },
         {
           "Name": "ETag",
-          "Value": "\"y8nn2ORfIGBXSfsSyZ9XUXDmQdRkpolBFZBs8OYIA5g=\""
+          "Value": "\"asIfNKn+4kMgjUFxuoT0Acx62zM2nZHjE/UcGriG1dg=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 29 Jan 2025 17:44:48 GMT"
+          "Value": "Thu, 30 Jan 2025 07:06:46 GMT"
         },
         {
           "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
+          "Value": "no-cache"
         }
       ],
       "EndpointProperties": [
         {
-          "Name": "fingerprint",
-          "Value": "f35gg7w3ze"
-        },
-        {
-          "Name": "label",
-          "Value": "editor.js"
-        },
-        {
           "Name": "integrity",
-          "Value": "sha256-y8nn2ORfIGBXSfsSyZ9XUXDmQdRkpolBFZBs8OYIA5g="
+          "Value": "sha256-asIfNKn+4kMgjUFxuoT0Acx62zM2nZHjE/UcGriG1dg="
         }
       ]
     },
     {
-      "Route": "editor.f35gg7w3ze.js.gz",
-      "AssetFile": "D:\\Rider Projects\\PetProject\\PetProject\\obj\\Debug\\net9.0\\compressed\\uxucma3h0q-f35gg7w3ze.gz",
+      "Route": "css/index.css.gz",
+      "AssetFile": "D:\\Rider Projects\\PetProject\\PetProject\\obj\\Debug\\net9.0\\compressed\\czxl30myjr-uvn6wpuc2f.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -179,23 +415,23 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "572"
+          "Value": "998"
         },
         {
           "Name": "Content-Type",
-          "Value": "text/javascript"
+          "Value": "text/css"
         },
         {
           "Name": "ETag",
-          "Value": "\"vzPgtGeSduzUZpebG6c1WU39c5v1wYrd3lzt8qPl2IE=\""
+          "Value": "\"OnPnA/6oycXox9YX5nTsLYbsKPniSTzKDlmWvd8n1QE=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 29 Jan 2025 17:44:48 GMT"
+          "Value": "Thu, 30 Jan 2025 07:06:46 GMT"
         },
         {
           "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
+          "Value": "no-cache"
         },
         {
           "Name": "Content-Encoding",
@@ -208,27 +444,19 @@
       ],
       "EndpointProperties": [
         {
-          "Name": "fingerprint",
-          "Value": "f35gg7w3ze"
-        },
-        {
-          "Name": "label",
-          "Value": "editor.js.gz"
-        },
-        {
           "Name": "integrity",
-          "Value": "sha256-vzPgtGeSduzUZpebG6c1WU39c5v1wYrd3lzt8qPl2IE="
+          "Value": "sha256-OnPnA/6oycXox9YX5nTsLYbsKPniSTzKDlmWvd8n1QE="
         }
       ]
     },
     {
-      "Route": "editor.js",
-      "AssetFile": "D:\\Rider Projects\\PetProject\\PetProject\\obj\\Debug\\net9.0\\compressed\\uxucma3h0q-f35gg7w3ze.gz",
+      "Route": "css/index.uvn6wpuc2f.css",
+      "AssetFile": "D:\\Rider Projects\\PetProject\\PetProject\\obj\\Debug\\net9.0\\compressed\\czxl30myjr-uvn6wpuc2f.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
           "Value": "gzip",
-          "Quality": "0.001745200698"
+          "Quality": "0.001001001001"
         }
       ],
       "ResponseHeaders": [
@@ -238,15 +466,1827 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "572"
+          "Value": "998"
         },
         {
           "Name": "ETag",
-          "Value": "\"vzPgtGeSduzUZpebG6c1WU39c5v1wYrd3lzt8qPl2IE=\""
+          "Value": "\"OnPnA/6oycXox9YX5nTsLYbsKPniSTzKDlmWvd8n1QE=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 29 Jan 2025 17:44:48 GMT"
+          "Value": "Thu, 30 Jan 2025 07:06:46 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"asIfNKn+4kMgjUFxuoT0Acx62zM2nZHjE/UcGriG1dg=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "uvn6wpuc2f"
+        },
+        {
+          "Name": "label",
+          "Value": "css/index.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-asIfNKn+4kMgjUFxuoT0Acx62zM2nZHjE/UcGriG1dg="
+        }
+      ]
+    },
+    {
+      "Route": "css/index.uvn6wpuc2f.css",
+      "AssetFile": "D:\\Rider Projects\\PetProject\\PetProject\\wwwroot\\css\\index.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2754"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"asIfNKn+4kMgjUFxuoT0Acx62zM2nZHjE/UcGriG1dg=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 30 Jan 2025 07:06:46 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "uvn6wpuc2f"
+        },
+        {
+          "Name": "label",
+          "Value": "css/index.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-asIfNKn+4kMgjUFxuoT0Acx62zM2nZHjE/UcGriG1dg="
+        }
+      ]
+    },
+    {
+      "Route": "css/index.uvn6wpuc2f.css.gz",
+      "AssetFile": "D:\\Rider Projects\\PetProject\\PetProject\\obj\\Debug\\net9.0\\compressed\\czxl30myjr-uvn6wpuc2f.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "998"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"OnPnA/6oycXox9YX5nTsLYbsKPniSTzKDlmWvd8n1QE=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 30 Jan 2025 07:06:46 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "uvn6wpuc2f"
+        },
+        {
+          "Name": "label",
+          "Value": "css/index.css.gz"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-OnPnA/6oycXox9YX5nTsLYbsKPniSTzKDlmWvd8n1QE="
+        }
+      ]
+    },
+    {
+      "Route": "css/login.css",
+      "AssetFile": "D:\\Rider Projects\\PetProject\\PetProject\\obj\\Debug\\net9.0\\compressed\\9daf7d13g1-hcpys412ev.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.001109877913"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "900"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"wvnqDU0tyrjOabYI/uzVj8YOm0cewbD/XY4H4vlx7UE=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 30 Jan 2025 08:48:01 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"0XAmaWSqzqB1ebs1unOK1Xie8xgQvsyj3C152IW4W/o=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-0XAmaWSqzqB1ebs1unOK1Xie8xgQvsyj3C152IW4W/o="
+        }
+      ]
+    },
+    {
+      "Route": "css/login.css",
+      "AssetFile": "D:\\Rider Projects\\PetProject\\PetProject\\wwwroot\\css\\login.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2546"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"0XAmaWSqzqB1ebs1unOK1Xie8xgQvsyj3C152IW4W/o=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 30 Jan 2025 08:48:01 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-0XAmaWSqzqB1ebs1unOK1Xie8xgQvsyj3C152IW4W/o="
+        }
+      ]
+    },
+    {
+      "Route": "css/login.css.gz",
+      "AssetFile": "D:\\Rider Projects\\PetProject\\PetProject\\obj\\Debug\\net9.0\\compressed\\9daf7d13g1-hcpys412ev.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "900"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"wvnqDU0tyrjOabYI/uzVj8YOm0cewbD/XY4H4vlx7UE=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 30 Jan 2025 08:48:01 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-wvnqDU0tyrjOabYI/uzVj8YOm0cewbD/XY4H4vlx7UE="
+        }
+      ]
+    },
+    {
+      "Route": "css/login.hcpys412ev.css",
+      "AssetFile": "D:\\Rider Projects\\PetProject\\PetProject\\obj\\Debug\\net9.0\\compressed\\9daf7d13g1-hcpys412ev.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.001109877913"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "900"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"wvnqDU0tyrjOabYI/uzVj8YOm0cewbD/XY4H4vlx7UE=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 30 Jan 2025 08:48:01 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"0XAmaWSqzqB1ebs1unOK1Xie8xgQvsyj3C152IW4W/o=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "hcpys412ev"
+        },
+        {
+          "Name": "label",
+          "Value": "css/login.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-0XAmaWSqzqB1ebs1unOK1Xie8xgQvsyj3C152IW4W/o="
+        }
+      ]
+    },
+    {
+      "Route": "css/login.hcpys412ev.css",
+      "AssetFile": "D:\\Rider Projects\\PetProject\\PetProject\\wwwroot\\css\\login.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2546"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"0XAmaWSqzqB1ebs1unOK1Xie8xgQvsyj3C152IW4W/o=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 30 Jan 2025 08:48:01 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "hcpys412ev"
+        },
+        {
+          "Name": "label",
+          "Value": "css/login.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-0XAmaWSqzqB1ebs1unOK1Xie8xgQvsyj3C152IW4W/o="
+        }
+      ]
+    },
+    {
+      "Route": "css/login.hcpys412ev.css.gz",
+      "AssetFile": "D:\\Rider Projects\\PetProject\\PetProject\\obj\\Debug\\net9.0\\compressed\\9daf7d13g1-hcpys412ev.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "900"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"wvnqDU0tyrjOabYI/uzVj8YOm0cewbD/XY4H4vlx7UE=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 30 Jan 2025 08:48:01 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "hcpys412ev"
+        },
+        {
+          "Name": "label",
+          "Value": "css/login.css.gz"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-wvnqDU0tyrjOabYI/uzVj8YOm0cewbD/XY4H4vlx7UE="
+        }
+      ]
+    },
+    {
+      "Route": "css/paste.14ma0dv4qu.css",
+      "AssetFile": "D:\\Rider Projects\\PetProject\\PetProject\\obj\\Debug\\net9.0\\compressed\\ust90vw9u9-14ma0dv4qu.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.000432338954"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2312"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"5/PLAL1zEuLN9YtL1Z2qy1Rqflm0DeZCMzcl7djM45o=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 30 Jan 2025 08:46:33 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"cdKv+o4w6ZwqKnLaPIhqgXBXUq/dwx1FMdmaDbnLk90=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "14ma0dv4qu"
+        },
+        {
+          "Name": "label",
+          "Value": "css/paste.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-cdKv+o4w6ZwqKnLaPIhqgXBXUq/dwx1FMdmaDbnLk90="
+        }
+      ]
+    },
+    {
+      "Route": "css/paste.14ma0dv4qu.css",
+      "AssetFile": "D:\\Rider Projects\\PetProject\\PetProject\\wwwroot\\css\\paste.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "9148"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"cdKv+o4w6ZwqKnLaPIhqgXBXUq/dwx1FMdmaDbnLk90=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 30 Jan 2025 08:46:33 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "14ma0dv4qu"
+        },
+        {
+          "Name": "label",
+          "Value": "css/paste.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-cdKv+o4w6ZwqKnLaPIhqgXBXUq/dwx1FMdmaDbnLk90="
+        }
+      ]
+    },
+    {
+      "Route": "css/paste.14ma0dv4qu.css.gz",
+      "AssetFile": "D:\\Rider Projects\\PetProject\\PetProject\\obj\\Debug\\net9.0\\compressed\\ust90vw9u9-14ma0dv4qu.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2312"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"5/PLAL1zEuLN9YtL1Z2qy1Rqflm0DeZCMzcl7djM45o=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 30 Jan 2025 08:46:33 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "14ma0dv4qu"
+        },
+        {
+          "Name": "label",
+          "Value": "css/paste.css.gz"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-5/PLAL1zEuLN9YtL1Z2qy1Rqflm0DeZCMzcl7djM45o="
+        }
+      ]
+    },
+    {
+      "Route": "css/paste.css",
+      "AssetFile": "D:\\Rider Projects\\PetProject\\PetProject\\obj\\Debug\\net9.0\\compressed\\ust90vw9u9-14ma0dv4qu.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.000432338954"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2312"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"5/PLAL1zEuLN9YtL1Z2qy1Rqflm0DeZCMzcl7djM45o=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 30 Jan 2025 08:46:33 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"cdKv+o4w6ZwqKnLaPIhqgXBXUq/dwx1FMdmaDbnLk90=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-cdKv+o4w6ZwqKnLaPIhqgXBXUq/dwx1FMdmaDbnLk90="
+        }
+      ]
+    },
+    {
+      "Route": "css/paste.css",
+      "AssetFile": "D:\\Rider Projects\\PetProject\\PetProject\\wwwroot\\css\\paste.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "9148"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"cdKv+o4w6ZwqKnLaPIhqgXBXUq/dwx1FMdmaDbnLk90=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 30 Jan 2025 08:46:33 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-cdKv+o4w6ZwqKnLaPIhqgXBXUq/dwx1FMdmaDbnLk90="
+        }
+      ]
+    },
+    {
+      "Route": "css/paste.css.gz",
+      "AssetFile": "D:\\Rider Projects\\PetProject\\PetProject\\obj\\Debug\\net9.0\\compressed\\ust90vw9u9-14ma0dv4qu.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2312"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"5/PLAL1zEuLN9YtL1Z2qy1Rqflm0DeZCMzcl7djM45o=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 30 Jan 2025 08:46:33 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-5/PLAL1zEuLN9YtL1Z2qy1Rqflm0DeZCMzcl7djM45o="
+        }
+      ]
+    },
+    {
+      "Route": "css/profile.css",
+      "AssetFile": "D:\\Rider Projects\\PetProject\\PetProject\\obj\\Debug\\net9.0\\compressed\\12ouk1i1de-k9w9n2ftm6.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.000783699060"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1275"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"o4f+1beos0r+ZbFBn+jIbBXR5QA0ebCseJfHGAITWn4=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 30 Jan 2025 08:07:40 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"mPo2j9uOXsdXqbzNh0jzK3n2a34eOENvJLky5NoKZNY=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-mPo2j9uOXsdXqbzNh0jzK3n2a34eOENvJLky5NoKZNY="
+        }
+      ]
+    },
+    {
+      "Route": "css/profile.css",
+      "AssetFile": "D:\\Rider Projects\\PetProject\\PetProject\\wwwroot\\css\\profile.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "3946"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"mPo2j9uOXsdXqbzNh0jzK3n2a34eOENvJLky5NoKZNY=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 30 Jan 2025 08:07:40 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-mPo2j9uOXsdXqbzNh0jzK3n2a34eOENvJLky5NoKZNY="
+        }
+      ]
+    },
+    {
+      "Route": "css/profile.css.gz",
+      "AssetFile": "D:\\Rider Projects\\PetProject\\PetProject\\obj\\Debug\\net9.0\\compressed\\12ouk1i1de-k9w9n2ftm6.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1275"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"o4f+1beos0r+ZbFBn+jIbBXR5QA0ebCseJfHGAITWn4=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 30 Jan 2025 08:07:40 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-o4f+1beos0r+ZbFBn+jIbBXR5QA0ebCseJfHGAITWn4="
+        }
+      ]
+    },
+    {
+      "Route": "css/profile.k9w9n2ftm6.css",
+      "AssetFile": "D:\\Rider Projects\\PetProject\\PetProject\\obj\\Debug\\net9.0\\compressed\\12ouk1i1de-k9w9n2ftm6.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.000783699060"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1275"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"o4f+1beos0r+ZbFBn+jIbBXR5QA0ebCseJfHGAITWn4=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 30 Jan 2025 08:07:40 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"mPo2j9uOXsdXqbzNh0jzK3n2a34eOENvJLky5NoKZNY=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "k9w9n2ftm6"
+        },
+        {
+          "Name": "label",
+          "Value": "css/profile.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-mPo2j9uOXsdXqbzNh0jzK3n2a34eOENvJLky5NoKZNY="
+        }
+      ]
+    },
+    {
+      "Route": "css/profile.k9w9n2ftm6.css",
+      "AssetFile": "D:\\Rider Projects\\PetProject\\PetProject\\wwwroot\\css\\profile.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "3946"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"mPo2j9uOXsdXqbzNh0jzK3n2a34eOENvJLky5NoKZNY=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 30 Jan 2025 08:07:40 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "k9w9n2ftm6"
+        },
+        {
+          "Name": "label",
+          "Value": "css/profile.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-mPo2j9uOXsdXqbzNh0jzK3n2a34eOENvJLky5NoKZNY="
+        }
+      ]
+    },
+    {
+      "Route": "css/profile.k9w9n2ftm6.css.gz",
+      "AssetFile": "D:\\Rider Projects\\PetProject\\PetProject\\obj\\Debug\\net9.0\\compressed\\12ouk1i1de-k9w9n2ftm6.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1275"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"o4f+1beos0r+ZbFBn+jIbBXR5QA0ebCseJfHGAITWn4=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 30 Jan 2025 08:07:40 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "k9w9n2ftm6"
+        },
+        {
+          "Name": "label",
+          "Value": "css/profile.css.gz"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-o4f+1beos0r+ZbFBn+jIbBXR5QA0ebCseJfHGAITWn4="
+        }
+      ]
+    },
+    {
+      "Route": "css/register.css",
+      "AssetFile": "D:\\Rider Projects\\PetProject\\PetProject\\obj\\Debug\\net9.0\\compressed\\ie6swvk3ty-wdlsmzn2t8.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.000898472597"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1112"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"KUlpT83D8QmFDisSTvSJwHnDHc71fXd0jkvjtETeoNc=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 30 Jan 2025 08:39:59 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"vHIP8/YOLsGGqFO7WbmXJday8a8ULy8n+zeqzGG5dhI=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-vHIP8/YOLsGGqFO7WbmXJday8a8ULy8n+zeqzGG5dhI="
+        }
+      ]
+    },
+    {
+      "Route": "css/register.css",
+      "AssetFile": "D:\\Rider Projects\\PetProject\\PetProject\\wwwroot\\css\\register.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "3236"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"vHIP8/YOLsGGqFO7WbmXJday8a8ULy8n+zeqzGG5dhI=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 30 Jan 2025 08:39:59 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-vHIP8/YOLsGGqFO7WbmXJday8a8ULy8n+zeqzGG5dhI="
+        }
+      ]
+    },
+    {
+      "Route": "css/register.css.gz",
+      "AssetFile": "D:\\Rider Projects\\PetProject\\PetProject\\obj\\Debug\\net9.0\\compressed\\ie6swvk3ty-wdlsmzn2t8.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1112"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"KUlpT83D8QmFDisSTvSJwHnDHc71fXd0jkvjtETeoNc=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 30 Jan 2025 08:39:59 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-KUlpT83D8QmFDisSTvSJwHnDHc71fXd0jkvjtETeoNc="
+        }
+      ]
+    },
+    {
+      "Route": "css/register.wdlsmzn2t8.css",
+      "AssetFile": "D:\\Rider Projects\\PetProject\\PetProject\\obj\\Debug\\net9.0\\compressed\\ie6swvk3ty-wdlsmzn2t8.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.000898472597"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1112"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"KUlpT83D8QmFDisSTvSJwHnDHc71fXd0jkvjtETeoNc=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 30 Jan 2025 08:39:59 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"vHIP8/YOLsGGqFO7WbmXJday8a8ULy8n+zeqzGG5dhI=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "wdlsmzn2t8"
+        },
+        {
+          "Name": "label",
+          "Value": "css/register.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-vHIP8/YOLsGGqFO7WbmXJday8a8ULy8n+zeqzGG5dhI="
+        }
+      ]
+    },
+    {
+      "Route": "css/register.wdlsmzn2t8.css",
+      "AssetFile": "D:\\Rider Projects\\PetProject\\PetProject\\wwwroot\\css\\register.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "3236"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"vHIP8/YOLsGGqFO7WbmXJday8a8ULy8n+zeqzGG5dhI=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 30 Jan 2025 08:39:59 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "wdlsmzn2t8"
+        },
+        {
+          "Name": "label",
+          "Value": "css/register.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-vHIP8/YOLsGGqFO7WbmXJday8a8ULy8n+zeqzGG5dhI="
+        }
+      ]
+    },
+    {
+      "Route": "css/register.wdlsmzn2t8.css.gz",
+      "AssetFile": "D:\\Rider Projects\\PetProject\\PetProject\\obj\\Debug\\net9.0\\compressed\\ie6swvk3ty-wdlsmzn2t8.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1112"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"KUlpT83D8QmFDisSTvSJwHnDHc71fXd0jkvjtETeoNc=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 30 Jan 2025 08:39:59 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "wdlsmzn2t8"
+        },
+        {
+          "Name": "label",
+          "Value": "css/register.css.gz"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-KUlpT83D8QmFDisSTvSJwHnDHc71fXd0jkvjtETeoNc="
+        }
+      ]
+    },
+    {
+      "Route": "css/style.css",
+      "AssetFile": "D:\\Rider Projects\\PetProject\\PetProject\\obj\\Debug\\net9.0\\compressed\\wkac5ji5qp-vg6ulqq70p.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.001094091904"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "913"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"jn4FcrTNlh8JV6wA2eMQB/kDaPpy0WpVoDXLUfH1Dtc=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 30 Jan 2025 08:57:11 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"P7nj1JKM5iMs07fQFlp3nMJXVRB/u9O8liiKnxlFdn8=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-P7nj1JKM5iMs07fQFlp3nMJXVRB/u9O8liiKnxlFdn8="
+        }
+      ]
+    },
+    {
+      "Route": "css/style.css",
+      "AssetFile": "D:\\Rider Projects\\PetProject\\PetProject\\wwwroot\\css\\style.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2851"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"P7nj1JKM5iMs07fQFlp3nMJXVRB/u9O8liiKnxlFdn8=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 30 Jan 2025 08:57:11 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-P7nj1JKM5iMs07fQFlp3nMJXVRB/u9O8liiKnxlFdn8="
+        }
+      ]
+    },
+    {
+      "Route": "css/style.css.gz",
+      "AssetFile": "D:\\Rider Projects\\PetProject\\PetProject\\obj\\Debug\\net9.0\\compressed\\wkac5ji5qp-vg6ulqq70p.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "913"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"jn4FcrTNlh8JV6wA2eMQB/kDaPpy0WpVoDXLUfH1Dtc=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 30 Jan 2025 08:57:11 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-jn4FcrTNlh8JV6wA2eMQB/kDaPpy0WpVoDXLUfH1Dtc="
+        }
+      ]
+    },
+    {
+      "Route": "css/style.vg6ulqq70p.css",
+      "AssetFile": "D:\\Rider Projects\\PetProject\\PetProject\\obj\\Debug\\net9.0\\compressed\\wkac5ji5qp-vg6ulqq70p.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.001094091904"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "913"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"jn4FcrTNlh8JV6wA2eMQB/kDaPpy0WpVoDXLUfH1Dtc=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 30 Jan 2025 08:57:11 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"P7nj1JKM5iMs07fQFlp3nMJXVRB/u9O8liiKnxlFdn8=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "vg6ulqq70p"
+        },
+        {
+          "Name": "label",
+          "Value": "css/style.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-P7nj1JKM5iMs07fQFlp3nMJXVRB/u9O8liiKnxlFdn8="
+        }
+      ]
+    },
+    {
+      "Route": "css/style.vg6ulqq70p.css",
+      "AssetFile": "D:\\Rider Projects\\PetProject\\PetProject\\wwwroot\\css\\style.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2851"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"P7nj1JKM5iMs07fQFlp3nMJXVRB/u9O8liiKnxlFdn8=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 30 Jan 2025 08:57:11 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "vg6ulqq70p"
+        },
+        {
+          "Name": "label",
+          "Value": "css/style.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-P7nj1JKM5iMs07fQFlp3nMJXVRB/u9O8liiKnxlFdn8="
+        }
+      ]
+    },
+    {
+      "Route": "css/style.vg6ulqq70p.css.gz",
+      "AssetFile": "D:\\Rider Projects\\PetProject\\PetProject\\obj\\Debug\\net9.0\\compressed\\wkac5ji5qp-vg6ulqq70p.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "913"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"jn4FcrTNlh8JV6wA2eMQB/kDaPpy0WpVoDXLUfH1Dtc=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 30 Jan 2025 08:57:11 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "vg6ulqq70p"
+        },
+        {
+          "Name": "label",
+          "Value": "css/style.css.gz"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-jn4FcrTNlh8JV6wA2eMQB/kDaPpy0WpVoDXLUfH1Dtc="
+        }
+      ]
+    },
+    {
+      "Route": "js/validations.51pbzu2a68.js",
+      "AssetFile": "D:\\Rider Projects\\PetProject\\PetProject\\obj\\Debug\\net9.0\\compressed\\xdccaravbk-51pbzu2a68.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.002222222222"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "449"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"LsFIkO9S/4+4IPV5YkaPPmWrev2C/6NO9L+1L1quMBc=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 30 Jan 2025 08:37:24 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"h9GkDyiavcb4PH9Dhf7gZeBi+58a1FfGuPRYo30NJVE=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "51pbzu2a68"
+        },
+        {
+          "Name": "label",
+          "Value": "js/validations.js"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-h9GkDyiavcb4PH9Dhf7gZeBi+58a1FfGuPRYo30NJVE="
+        }
+      ]
+    },
+    {
+      "Route": "js/validations.51pbzu2a68.js",
+      "AssetFile": "D:\\Rider Projects\\PetProject\\PetProject\\wwwroot\\js\\validations.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "775"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"h9GkDyiavcb4PH9Dhf7gZeBi+58a1FfGuPRYo30NJVE=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 30 Jan 2025 08:37:24 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "51pbzu2a68"
+        },
+        {
+          "Name": "label",
+          "Value": "js/validations.js"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-h9GkDyiavcb4PH9Dhf7gZeBi+58a1FfGuPRYo30NJVE="
+        }
+      ]
+    },
+    {
+      "Route": "js/validations.51pbzu2a68.js.gz",
+      "AssetFile": "D:\\Rider Projects\\PetProject\\PetProject\\obj\\Debug\\net9.0\\compressed\\xdccaravbk-51pbzu2a68.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "449"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"LsFIkO9S/4+4IPV5YkaPPmWrev2C/6NO9L+1L1quMBc=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 30 Jan 2025 08:37:24 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "51pbzu2a68"
+        },
+        {
+          "Name": "label",
+          "Value": "js/validations.js.gz"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-LsFIkO9S/4+4IPV5YkaPPmWrev2C/6NO9L+1L1quMBc="
+        }
+      ]
+    },
+    {
+      "Route": "js/validations.js",
+      "AssetFile": "D:\\Rider Projects\\PetProject\\PetProject\\obj\\Debug\\net9.0\\compressed\\xdccaravbk-51pbzu2a68.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.002222222222"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "449"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"LsFIkO9S/4+4IPV5YkaPPmWrev2C/6NO9L+1L1quMBc=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 30 Jan 2025 08:37:24 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -266,19 +2306,19 @@
         },
         {
           "Name": "ETag",
-          "Value": "W/\"y8nn2ORfIGBXSfsSyZ9XUXDmQdRkpolBFZBs8OYIA5g=\""
+          "Value": "W/\"h9GkDyiavcb4PH9Dhf7gZeBi+58a1FfGuPRYo30NJVE=\""
         }
       ],
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-y8nn2ORfIGBXSfsSyZ9XUXDmQdRkpolBFZBs8OYIA5g="
+          "Value": "sha256-h9GkDyiavcb4PH9Dhf7gZeBi+58a1FfGuPRYo30NJVE="
         }
       ]
     },
     {
-      "Route": "editor.js",
-      "AssetFile": "D:\\Rider Projects\\PetProject\\PetProject\\wwwroot\\editor.js",
+      "Route": "js/validations.js",
+      "AssetFile": "D:\\Rider Projects\\PetProject\\PetProject\\wwwroot\\js\\validations.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -287,7 +2327,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "1789"
+          "Value": "775"
         },
         {
           "Name": "Content-Type",
@@ -295,11 +2335,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"y8nn2ORfIGBXSfsSyZ9XUXDmQdRkpolBFZBs8OYIA5g=\""
+          "Value": "\"h9GkDyiavcb4PH9Dhf7gZeBi+58a1FfGuPRYo30NJVE=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 29 Jan 2025 17:44:48 GMT"
+          "Value": "Thu, 30 Jan 2025 08:37:24 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -309,13 +2349,13 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-y8nn2ORfIGBXSfsSyZ9XUXDmQdRkpolBFZBs8OYIA5g="
+          "Value": "sha256-h9GkDyiavcb4PH9Dhf7gZeBi+58a1FfGuPRYo30NJVE="
         }
       ]
     },
     {
-      "Route": "editor.js.gz",
-      "AssetFile": "D:\\Rider Projects\\PetProject\\PetProject\\obj\\Debug\\net9.0\\compressed\\uxucma3h0q-f35gg7w3ze.gz",
+      "Route": "js/validations.js.gz",
+      "AssetFile": "D:\\Rider Projects\\PetProject\\PetProject\\obj\\Debug\\net9.0\\compressed\\xdccaravbk-51pbzu2a68.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -324,7 +2364,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "572"
+          "Value": "449"
         },
         {
           "Name": "Content-Type",
@@ -332,11 +2372,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"vzPgtGeSduzUZpebG6c1WU39c5v1wYrd3lzt8qPl2IE=\""
+          "Value": "\"LsFIkO9S/4+4IPV5YkaPPmWrev2C/6NO9L+1L1quMBc=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 29 Jan 2025 17:44:48 GMT"
+          "Value": "Thu, 30 Jan 2025 08:37:24 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -354,7 +2394,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-vzPgtGeSduzUZpebG6c1WU39c5v1wYrd3lzt8qPl2IE="
+          "Value": "sha256-LsFIkO9S/4+4IPV5YkaPPmWrev2C/6NO9L+1L1quMBc="
         }
       ]
     }

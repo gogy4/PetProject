@@ -39,4 +39,11 @@ public class PasteUserService(AppDbContext db) : Service(db)
     {
         return db.Pastes.Where(x => x.UserId == userId).ToList();
     }
+
+    public async Task DeleteAllPastes(string userId)
+    {
+        var pastes = GetPastesByUserId(userId);
+        db.Pastes.RemoveRange(pastes);
+        await db.SaveChangesAsync();
+    }
 }

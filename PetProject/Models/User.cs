@@ -1,11 +1,16 @@
 ﻿using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.ModelBinding;
 
 namespace PetProject.Models;
 
 public class User
 {
-    public string Id { get; set; }
+    [HiddenInput]
+    [BindNever]
+
+    public string? Id { get; set; }
     [Required(ErrorMessage = "Не указано имя")]
     public string? Name { get; set; }
     [EmailAddress (ErrorMessage = "Не указан электронный адрес")]

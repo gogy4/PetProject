@@ -20,8 +20,4 @@
       <_ContentIncludedByDefault Remove="Areas\Account\Views\Home\Index.cshtml" />
     </ItemGroup>
 
-    <ItemGroup>
-      <Folder Include="wwwroot\" />
-    </ItemGroup>
-
 </Project>

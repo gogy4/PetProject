@@ -120,4 +120,10 @@ D:\Rider Projects\PetProject\PetProject\bin\Debug\net9.0\zh-Hans\Microsoft.CodeA
 D:\Rider Projects\PetProject\PetProject\bin\Debug\net9.0\zh-Hant\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
 D:\Rider Projects\PetProject\PetProject\obj\Debug\net9.0\PetProject.sourcelink.json
 D:\Rider Projects\PetProject\PetProject\bin\Debug\net9.0\PetProject.staticwebassets.runtime.json
-D:\Rider Projects\PetProject\PetProject\obj\Debug\net9.0\compressed\uxucma3h0q-f35gg7w3ze.gz
+D:\Rider Projects\PetProject\PetProject\obj\Debug\net9.0\compressed\czxl30myjr-uvn6wpuc2f.gz
+D:\Rider Projects\PetProject\PetProject\obj\Debug\net9.0\compressed\12ouk1i1de-k9w9n2ftm6.gz
+D:\Rider Projects\PetProject\PetProject\obj\Debug\net9.0\compressed\ie6swvk3ty-wdlsmzn2t8.gz
+D:\Rider Projects\PetProject\PetProject\obj\Debug\net9.0\compressed\xdccaravbk-51pbzu2a68.gz
+D:\Rider Projects\PetProject\PetProject\obj\Debug\net9.0\compressed\9daf7d13g1-hcpys412ev.gz
+D:\Rider Projects\PetProject\PetProject\obj\Debug\net9.0\compressed\ust90vw9u9-14ma0dv4qu.gz
+D:\Rider Projects\PetProject\PetProject\obj\Debug\net9.0\compressed\wkac5ji5qp-vg6ulqq70p.gz

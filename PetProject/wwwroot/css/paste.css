@@ -1,0 +1,280 @@
+﻿
+.page-heading {
+    font-size: 28px;
+    color: #4a148c;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.message-box {
+    box-sizing: border-box;
+    width: 100%;
+    background-color: #ffcccb;
+    border: 1px solid red;
+    color: red;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.buttons {
+    box-sizing: border-box; /* Учитывает padding и border в размере элемента */
+    display: flex;
+    flex-wrap: wrap; /* Переносит элементы на новую строку, если они не помещаются */
+    gap: 10px; /* Отступы между кнопками */
+    align-items: center; /* Выравнивание по вертикали */
+    justify-content: center; /* Выравнивание по горизонтали */
+    background: transparent; /* Убираем фон */
+    border-radius: 0; /* Убираем скругление углов */
+    box-shadow: none; /* Убираем тень */
+    padding: 0; /* Убираем отступы, если они не нужны */
+    margin: 0;
+}
+
+
+.edit-form-container {
+    box-sizing: border-box; /* Учитывает padding и border в размере элемента */
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    margin: 20px auto;
+    max-width: 800px;
+}
+
+.content-textarea {
+    background-color: #f3e5f5;
+    border: 1px solid mediumpurple;
+    width: 100%;
+    height: 200px;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 14px;
+    resize: vertical;
+}
+
+#editPasteButton,
+.save-changes-button,
+.cancel-editing-button {
+    padding: 10px 20px;
+    background-color: #4a148c;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 14px;
+}
+
+#editPasteButton:hover,
+.save-changes-button:hover,
+.cancel-editing-button:hover {
+    background-color: #805aae;
+}
+
+.delete-paste-button {
+    padding: 10px 20px;
+    background-color: #4a148c;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 14px;
+    margin: 0; /* Убираем лишние отступы */
+    width: auto; /* Кнопка будет адаптироваться по ширине */
+}
+
+.delete-paste-button:hover {
+    /* Заголовок страницы входа */
+    .login-title {
+        font-size: 28px;
+        color: #4a148c;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+    /* Общие стили для формы входа */
+    .login-form {
+        width: 100%;
+        max-width: 500px;
+        margin: 0 auto;
+        padding: 20px;
+        background-color: #ffffff;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Стили для обертки каждого поля формы */
+    .form-group {
+        margin-bottom: 20px;
+    }
+
+    /* Стили для метки поля */
+    .form-label {
+        font-size: 16px;
+        color: #333;
+        display: block;
+        margin-bottom: 8px;
+    }
+
+    /* Стили для полей ввода */
+    .form-input {
+        width: 100%;
+        padding: 10px;
+        font-size: 14px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        box-sizing: border-box;
+    }
+
+    /* Стили для кнопки отправки формы */
+    .submit-btn {
+        background-color: #4a148c;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;
+        transition: background-color 0.3s ease;
+        width: 100%;
+        text-align: center;
+    }
+
+    /* Ховер эффект для кнопки отправки */
+    .submit-btn:hover {
+        background-color: #805aae;
+    }
+
+    /* Стили для сообщения об ошибке */
+    .error-message {
+        width: 100%;
+        background-color: #f8d7da;
+        border: 1px solid red;
+        color: red;
+        padding: 15px;
+        border-radius: 8px;
+        margin-bottom: 20px;
+        font-weight: bold;
+        text-align: left;
+    }
+
+    /* Стили для сообщений об ошибках рядом с полями */
+    .field-validation-error {
+        font-size: 12px;
+        color: red;
+        margin-top: 5px;
+    }
+
+    /* Стили для полей с ошибками (красная рамка) */
+    .form-input.error {
+        border-color: red;
+        box-shadow: 0 0 5px rgba(255, 0, 0, 0.5);
+    }
+
+    /* Дополнительные стили для подсветки поля с ошибкой */
+    .form-group .form-input:focus:invalid {
+        outline: none;
+        box-shadow: 0 0 5px rgba(255, 0, 0, 0.7);
+    }
+
+    /* Дополнительные стили для фокуса на поле */
+    .form-group .form-input:focus {
+        border-color: #4a148c;
+        box-shadow: 0 0 5px rgba(74, 20, 140, 0.3);
+    }
+
+}
+
+.copy-paste-button {
+    padding: 10px 20px;
+    background-color: #4a148c;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 14px;
+    margin: 0; /* Убираем лишние отступы */
+    width: auto; /* Кнопка будет адаптироваться по ширине */
+}
+
+.copy-paste-button:hover {
+    background-color: #805aae;
+}
+
+.paste-content-container {
+    background-color: #f3e5f5;
+    border: 1px solid mediumpurple;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    white-space: pre-wrap; /* Сохраняет пробелы и переносы строк */
+    word-wrap: break-word;  /* Прерывает длинные слова, чтобы они не выходили за рамки */
+    word-break: break-word;  /* Обеспечивает перенос слов при необходимости */
+    overflow-wrap: break-word;  /* Обеспечивает перенос длинных слов, если они слишком длинные */
+    max-width: 100%;  /* Убедитесь, что контейнер не выходит за ширину родительского элемента */
+    box-sizing: border-box; /* Чтобы padding учитывался в расчете ширины */
+    overflow-x: auto;  /* Ползунок по горизонтали */
+    word-break: break-word;  /* Прерывает длинные слова, чтобы они не выходили за рамки */
+}
+
+/* Кастомизация полосы прокрутки */
+.paste-content-container::-webkit-scrollbar {
+    width: 8px;  /* Ширина вертикальной полосы прокрутки */
+    height: 8px; /* Высота горизонтальной полосы прокрутки */
+}
+
+.paste-content-container::-webkit-scrollbar-thumb {
+    background-color: #4a148c;  /* Цвет фиолетового ползунка */
+    border-radius: 4px; /* Радиус скругления для ползунка */
+}
+
+.paste-content-container::-webkit-scrollbar-thumb:hover {
+    background-color: #805aae;  /* Цвет при наведении */
+}
+
+.paste-content-container::-webkit-scrollbar-track {
+    background-color: #f0e5f8;  /* Цвет фона полосы прокрутки */
+    border-radius: 4px; /* Скругление углов полосы прокрутки */
+}
+
+
+/* Дата создания пасты */
+.paste-date {
+    font-size: 12px;
+    color: #777;
+    text-align: center; /* Горизонтальное выравнивание */
+    display: flex; /* Для вертикального выравнивания */
+    justify-content: center; /* Центрирует по горизонтали */
+    align-items: center; /* Центрирует по вертикали */
+    height: 100%; /* Обеспечивает, чтобы элемент занимал всю доступную высоту родителя */
+}
+
+/* Медиа-запрос для маленьких экранов */
+@media (max-width: 600px) {
+    /* Форма редактирования пасты */
+    .edit-form-container {
+        padding: 20px;
+    }
+
+    /* Текстовое поле для редактирования */
+    .content-textarea {
+        height: 120px;
+    }
+
+    /* Кнопки редактирования */
+    #editPasteButton,
+    .save-changes-button,
+    .cancel-editing-button,
+    .delete-paste-button,
+    .copy-paste-button {
+        width: 100%;
+        padding: 12px;
+        font-size: 16px;
+    }
+}

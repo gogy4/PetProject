@@ -1,36 +1,41 @@
-﻿@using System.Security.Claims
-@using Microsoft.AspNetCore.Mvc.TagHelpers
-@model PetProject.Models.TextPaste
-
-<h2>Paste Content</h2>
-
-<p id="pasteContentContainer" style="white-space: pre;">@Model.Content</p>
-
-<p><small>Created at: @Model.Date</small></p>
+﻿@model PetProject.Models.TextPaste
+<link rel="stylesheet" href="~/css/paste.css" asp-append-version="true" />
+@{
+    ViewData["Title"] = "Паста";
+}
+<h2 class="page-heading">Ваша паста</h2>
+<div class="buttons">
 
 @if (User.Identity.IsAuthenticated && Model.UserId == User.FindFirstValue(ClaimTypes.NameIdentifier))
 {
     <p>
         <!-- Кнопка "Изменить пасту", при нажатии будет активировать редактирование -->
-        <button id="editPasteButton" onclick="startEditing()">Изменить пасту</button>
+        <button id="editPasteButton" class="edit-paste-button" onclick="startEditing()">Изменить пасту</button>
     </p>
     <p>
-    <form id="deleteForm" asp-action="Delete" method="post">
+    <form id="deleteForm" class="delete-form" asp-action="Delete" method="post">
         <input asp-for="Id" type="hidden" name="Id" value="@Model.Id"/>
-        <button type="submit">Удалить пасту</button>
+        <button type="submit" class="delete-paste-button">Удалить пасту</button>
     </form>
     </p>
 }
+<p>
+    <!-- Кнопка "Скопировать" для копирования содержимого пасты -->
+    <button id="copyPasteButton" class="copy-paste-button" onclick="copyPasteContent()">Скопировать пасту</button>
+</p>
 
+</div>
 <!-- Форма для редактирования пасты (по умолчанию скрыта) -->
-<div id="editFormContainer" style="display:none;">
-    <form id="editForm" onsubmit="submitEditForm(event)">
-        <textarea name="content" id="content" rows="10" cols="50">@Model.Content</textarea>
+<div id="editFormContainer" class="edit-form-container" style="display:none;">
+    <form id="editForm" class="edit-form" onsubmit="submitEditForm(event)">
+        <textarea name="content" id="content" class="content-textarea" rows="10" cols="50">@Model.Content</textarea>
         <input type="hidden" name="Id" value="@Model.Id" />
-        <button type="submit">Сохранить изменения</button>
-        <button type="button" onclick="cancelEditing()">Отменить</button>
+        <button type="submit" class="save-changes-button">Сохранить изменения</button>
+        <button type="button" class="cancel-editing-button" onclick="cancelEditing()">Отменить</button>
     </form>
 </div>
+<p id="pasteContentContainer" class="paste-content-container" style="white-space: pre;">@Model.Content</p>
+<p><small class="paste-date">Создано: @Model.Date</small></p>
 
 <script>
     function startEditing() {
@@ -91,4 +96,30 @@
                 console.error('Ошибка:', error);
             });
     }
+
+    function copyPasteContent() {
+        // Получаем элемент с текстом пасты
+        const pasteContent = document.getElementById('pasteContentContainer').innerText;
+
+        // Создаем временное текстовое поле для копирования текста
+        const tempTextArea = document.createElement('textarea');
+        tempTextArea.value = pasteContent; // Устанавливаем значение как текст пасты
+        document.body.appendChild(tempTextArea); // Добавляем его в DOM
+
+        // Выделяем текст в текстовом поле
+        tempTextArea.select();
+        tempTextArea.setSelectionRange(0, 99999); // Для мобильных устройств
+
+        // Копируем текст в буфер обмена
+        try {
+            document.execCommand('copy'); // В некоторых браузерах можно использовать document.execCommand
+            alert('Паста скопирована в буфер обмена!');
+        } catch (err) {
+            alert('Не удалось скопировать текст. Попробуйте снова.');
+        }
+
+        // Удаляем временное текстовое поле
+        document.body.removeChild(tempTextArea);
+    }
+
 </script>

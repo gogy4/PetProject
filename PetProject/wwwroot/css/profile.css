@@ -1,0 +1,193 @@
+﻿/* Стили для страницы профиля */
+
+/* Заголовок страницы профиля */
+.page-heading {
+    font-size: 28px;
+    color: #4a148c;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Сообщение (например, об ошибке) */
+.validation-summary {
+    box-sizing: border-box;
+    width: 100%;
+    background-color: #ffcccb;
+    border: 1px solid red;
+    color: red;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    font-weight: bold;
+    text-align: left; /* Выравнивание по левому краю */
+    display: none;
+}
+
+.validation-summary ul {
+    list-style-type: none; /* Убирает точки */
+    padding-left: 0;
+    margin: 0;
+}
+
+.validation-summary li {
+    margin-bottom: 10px; /* Добавляет отступы между ошибками */
+}
+
+
+
+/* Стили для кнопок */
+.buttons {
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+    border-radius: 0;
+    box-shadow: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Контейнер для формы редактирования */
+.profile-form {
+    box-sizing: border-box;
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    margin: 20px auto;
+    max-width: 800px;
+}
+
+/* Стили для текстовых полей формы */
+.form-group {
+    box-sizing: border-box;
+    margin-bottom: 15px;
+}
+
+.form-input {
+    box-sizing: border-box;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+}
+
+.submit-btn {
+    padding: 10px 20px;
+    background-color: #4a148c;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 14px;
+}
+
+.submit-btn:hover {
+    background-color: #805aae;
+}
+
+/* Заголовок "Ваши пасты" */
+.user-pastes-heading {
+    font-size: 24px;
+    color: #4a148c;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.delete-pastes-form {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.delete-pastes-btn:hover {
+    background-color: palevioletred;
+}
+
+.delete-user-btn:hover {
+    background-color: palevioletred;
+}
+
+
+/* Стили для списка паст */
+.pastes-list {
+    list-style: none;
+    padding: 0;
+}
+
+.paste-item {
+    background-color: #f3e5f5;
+    padding: 15px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.paste-id {
+    font-weight: bold;
+}
+
+.open-paste-link {
+    color: #4a148c;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.open-paste-link:hover {
+    color: purple;
+}
+
+/* Стили для сообщения о том, что паст нет */
+.no-pastes-message {
+    text-align: center;
+    font-size: 16px;
+    color: #777;
+}
+
+/* Стили для формы удаления пользователя */
+.delete-user-form {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+
+
+/* Стили для формы выхода */
+.logout-form {
+    text-align: center;
+}
+
+/* Стили для скрытых полей ввода */
+.hidden-input {
+    display: none;
+}
+
+/* Медиа-запрос для мобильных устройств */
+@media (max-width: 600px) {
+    .profile-form {
+        padding: 20px;
+    }
+
+    .form-input {
+        padding: 12px;
+    }
+
+    .submit-btn {
+        width: 100%;
+        padding: 12px;
+        font-size: 16px;
+    }
+
+    .user-pastes-heading {
+        font-size: 22px;
+    }
+
+    .paste-item {
+        padding: 12px;
+    }
+}

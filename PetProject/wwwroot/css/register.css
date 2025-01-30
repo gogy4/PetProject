@@ -1,0 +1,119 @@
+﻿/* Заголовок страницы регистрации */
+.register-title {
+    font-size: 28px;
+    color: #4a148c;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Общие стили для формы регистрации */
+.register-form {
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Стили для обертки каждого поля формы */
+.form-group {
+    margin-bottom: 20px;
+}
+
+/* Стили для метки поля */
+.form-label {
+    font-size: 16px;
+    color: #333;
+    display: block;
+    margin-bottom: 8px;
+}
+
+/* Стили для полей ввода */
+.form-input {
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+/* Стили для кнопки отправки формы */
+.form-submit {
+    background-color: #4a148c;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+    width: 100%;
+    text-align: center;
+}
+
+/* Ховер эффект для кнопки отправки */
+.form-submit:hover {
+    background-color: #805aae;
+}
+
+/* Стили для сводки ошибок */
+.validation-summary {
+    display: none; /* Изначально скрываем, отображается при наличии ошибок */
+    width: 100%;
+    background-color: #f8d7da;
+    border: 1px solid red;
+    color: red;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    font-weight: bold;
+    text-align: left; /* Выравнивание по левому краю */
+}
+
+/* Стили для активной (видимой) сводки ошибок */
+.validation-summary.show {
+    display: block; /* Показываем при наличии ошибок */
+}
+
+/* Стили для сообщения в сводке ошибок */
+.validation-summary p {
+    margin: 0;
+}
+.validation-summary ul {
+    list-style-type: none; /* Убирает точки */
+    padding-left: 0;
+    margin: 0;
+}
+
+.validation-summary li {
+    margin-bottom: 10px; /* Добавляет отступы между ошибками */
+}
+
+
+/* Стили для сообщений об ошибках рядом с полями */
+.field-validation-error {
+    font-size: 12px;
+    color: red;
+    margin-top: 5px;
+}
+
+/* Стили для полей с ошибками (красная рамка) */
+.form-input.error {
+    border-color: red;
+    box-shadow: 0 0 5px rgba(255, 0, 0, 0.5);
+}
+
+/* Дополнительные стили для подсветки поля с ошибкой */
+.form-group .form-input:focus:invalid {
+    outline: none;
+    box-shadow: 0 0 5px rgba(255, 0, 0, 0.7);
+}
+
+/* Дополнительные стили для фокуса на поле */
+.form-group .form-input:focus {
+    border-color: #4a148c;
+    box-shadow: 0 0 5px rgba(74, 20, 140, 0.3);
+}

@@ -11,6 +11,7 @@ builder.Services.AddScoped<PasteService>();
 builder.Services.AddScoped<RegisterService>();
 builder.Services.AddScoped<PasteUserService>();
 builder.Services.AddScoped<LogInService>();
+
 // Настройка логирования
 builder.Logging.ClearProviders(); // Удалить все стандартные провайдеры
 builder.Logging.AddConsole(); // Добавить консольный логер
@@ -37,4 +38,5 @@ builder.Services.AddHostedService<CleanupService>();
 var app = builder.Build();
 
 app.MapDefaultControllerRoute();
+app.UseStaticFiles();
 app.Run();

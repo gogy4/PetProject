@@ -1,5 +1,4 @@
-﻿@using System.Security.Claims
-@using Microsoft.AspNetCore.Mvc.TagHelpers
+﻿<link rel="stylesheet" href="~/css/index.css" asp-append-version="true" />
 @{
     ViewBag.Title = "Главная страница";
     var currentUserId = User.FindFirstValue(ClaimTypes.NameIdentifier);
@@ -7,19 +6,19 @@
 }
 @if (TempData["Message"] != null)
 {
-    <div>
+    <div class="message-box">
         @TempData["Message"]
     </div>
 }
-<h2>Добавить новую запись</h2>
-<form asp-action="Paste" asp-controller="Paste" method="post">
-    <p>
-        <label>Введите текст</label><br />
-        <textarea name="content"></textarea> <!-- Убедитесь, что указали name="content" -->
+<h2 class="page-heading">Добавить новую запись</h2>
+<form asp-action="Paste" asp-controller="Paste" method="post" class="paste-form">
+    <p class="form-group">
+        <label for="content" class="label">Введите текст</label><br />
+        <textarea id="content" name="content" class="textarea"></textarea>
     </p>
-    <p>
-        <label>Выберите срок хранения пасты</label><br />
-        <select name="expiration">
+    <p class="form-group">
+        <label for="expiration" class="label">Выберите срок хранения пасты</label><br />
+        <select id="expiration" name="expiration" class="select">
             <option value="7">7 дней</option>
             <option value="30">30 дней</option>
             @if (logged)
@@ -28,7 +27,7 @@
             }
         </select>
     </p>
-    <p>
-        <input type="submit" value="Сохранить"/>
+    <p class="form-group">
+        <input type="submit" value="Сохранить" class="submit-btn"/>
     </p>
 </form>

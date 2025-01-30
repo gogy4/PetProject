@@ -1,97 +1,102 @@
-﻿@using Microsoft.AspNetCore.Mvc.TagHelpers
-@model PetProject.Models.ProfileViewModel
+﻿@model PetProject.Models.ProfileViewModel
 
 @{
-    ViewData["Title"] = "Profile";
+    ViewData["Title"] = "Профиль";
 }
 
-<form asp-action="Edit" method="post">
-    <input type="hidden" asp-for="User.Name" />
-    <input type="hidden" asp-for="User.Email" />
-    <input type="hidden" asp-for="User.Password" />
-    <input type="hidden" asp-for="User.NewPassword" />
-    <input type="hidden" asp-for="User.PasswordConfirm" />
+<link rel="stylesheet" href="~/css/profile.css" asp-append-version="true" />
+<script src="~/js/script.js"></script>
 
-    <p>
-        <label asp-for="User.Name">Изменить имя</label><br/>
-        <input type="text" asp-for="User.Name"/>
+<form asp-action="Edit" method="post" class="profile-form">
+    <input type="hidden" asp-for="User.Name" class="hidden-input" />
+    <input type="hidden" asp-for="User.Email" class="hidden-input" />
+    <input type="hidden" asp-for="User.Password" class="hidden-input" />
+    <input type="hidden" asp-for="User.NewPassword" class="hidden-input" />
+    <input type="hidden" asp-for="User.PasswordConfirm" class="hidden-input" />
+
+    <p class="form-group">
+        <label asp-for="User.Name" class="form-label">Изменить имя</label><br/>
+        <input type="text" asp-for="User.Name" class="form-input"/>
     </p>
 
-    <p>
-        <input type="submit" value="Изменить имя"/>
-    </p>
-</form>
-
-<form asp-action="Edit" method="post">
-    <input type="hidden" asp-for="User.Id" />
-    <input type="hidden" asp-for="User.Name" />
-    <input type="hidden" asp-for="User.Password" />
-    <input type="hidden" asp-for="User.NewPassword" />
-    <input type="hidden" asp-for="User.PasswordConfirm" />
-
-    <p>
-        <label asp-for="User.Email">Изменить адрес электронной почты</label><br/>
-        <input type="email" asp-for="User.Email"/>
-    </p>
-
-    <p>
-        <input type="submit" value="Изменить email"/>
+    <p class="form-group">
+        <input type="submit" value="Изменить имя" class="submit-btn"/>
     </p>
 </form>
 
-<form asp-action="Edit" method="post">
-    <div asp-validation-summary="All"></div>
-    <input type="hidden" asp-for="User.Id" />
-    <input type="hidden" asp-for="User.Name" />
-    <input type="hidden" asp-for="User.Email" />
+<form asp-action="Edit" method="post" class="profile-form">
+    <input type="hidden" asp-for="User.Id" class="hidden-input" />
+    <input type="hidden" asp-for="User.Name" class="hidden-input" />
+    <input type="hidden" asp-for="User.Password" class="hidden-input" />
+    <input type="hidden" asp-for="User.NewPassword" class="hidden-input" />
+    <input type="hidden" asp-for="User.PasswordConfirm" class="hidden-input" />
 
-    <p>
-        <label asp-for="User.Password">Введите предыдущий пароль</label><br/>
-        <input type="password" asp-for="User.Password"/>
+    <p class="form-group">
+        <label asp-for="User.Email" class="form-label">Изменить адрес электронной почты</label><br/>
+        <input type="email" asp-for="User.Email" class="form-input"/>
     </p>
 
-    <p>
-        <label asp-for="User.NewPassword">Новый пароль</label><br/>
-        <input type="password" asp-for="User.NewPassword"/>
-    </p>
-
-    <p>
-        <label asp-for="User.PasswordConfirm">Подтвердите пароль</label><br/>
-        <input type="password" asp-for="User.PasswordConfirm"/>
-    </p>
-
-    <p>
-        <input type="submit" value="Изменить пароль"/>
+    <p class="form-group">
+        <input type="submit" value="Изменить email" class="submit-btn"/>
     </p>
 </form>
 
-<h3>Ваши пасты</h3>
+<form asp-action="Edit" method="post" class="profile-form">
+    <div asp-validation-summary="All" class="validation-summary"></div>
+    <input type="hidden" asp-for="User.Id" class="hidden-input" />
+    <input type="hidden" asp-for="User.Name" class="hidden-input" />
+    <input type="hidden" asp-for="User.Email" class="hidden-input" />
+
+    <p class="form-group">
+        <label asp-for="User.Password" class="form-label">Введите предыдущий пароль</label><br/>
+        <input type="password" asp-for="User.Password" class="form-input"/>
+    </p>
+
+    <p class="form-group">
+        <label asp-for="User.NewPassword" class="form-label">Новый пароль</label><br/>
+        <input type="password" asp-for="User.NewPassword" class="form-input"/>
+    </p>
+
+    <p class="form-group">
+        <label asp-for="User.PasswordConfirm" class="form-label">Подтвердите пароль</label><br/>
+        <input type="password" asp-for="User.PasswordConfirm" class="form-input"/>
+    </p>
+
+    <p class="form-group">
+        <input type="submit" value="Изменить пароль" class="submit-btn"/>
+    </p>
+</form>
+
+<h3 class="user-pastes-heading">Ваши пасты</h3>
+<form asp-action="DeleteAllPastes" class="delete-pastes-form">
+    <input type="submit" value="Удалить все пасты" class="submit-btn delete-pastes-btn"/>
+</form>
 
 @if (Model.Pastes.Any())
 {
-    <ul>
+    <ul class="pastes-list">
         @foreach (var paste in Model.Pastes)
         {
-            <li>
-                <strong>@paste.Id</strong> - @paste.Date.ToShortDateString()
+            <li class="paste-item">
+                <strong class="paste-id">@paste.Id</strong> - @paste.Date.ToShortDateString()
                 <br/>
-                <a asp-controller="Paste" asp-action="GetPaste" asp-route-id="@paste.Id">Открыть</a>
+                <a asp-controller="Paste" asp-action="GetPaste" asp-route-id="@paste.Id" class="open-paste-link">Открыть</a>
             </li>
         }
     </ul>
 }
 else
 {
-    <p>У вас нет паст</p>
+    <p class="no-pastes-message">У вас нет паст</p>
 }
 
-<form asp-action="Delete" method="post">
-    <input type="hidden" name="id" asp-for="User.Id" />
-    <input type="submit" value="Удалить пользователя"/>
+<form asp-action="Logout" method="post" class="logout-form">
+    <input type="hidden" name="id" asp-for="User.Id" class="hidden-input"/>
+    <input type="submit" value="Выйти из аккаунта" class="submit-btn"/>
 </form>
 
-<form asp-action="Logout" method="post">
-    <input type="hidden" name="id" asp-for="User.Id" />
-    <input type="submit" value="Выйти из аккаунта"/>
+<form asp-action="Delete" method="post" class="delete-user-form">
+    <input type="hidden" name="id" asp-for="User.Id" class="hidden-input"/>
+    <input type="submit" value="Удалить пользователя" class="submit-btn delete-user-btn"/>
 </form>
 

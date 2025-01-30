@@ -1,17 +1,28 @@
 ﻿@model PetProject.Models.User
+
+@{
+    ViewData["Title"] = "Вход";
+}
+
+<link rel="stylesheet" href="~/css/login.css" asp-append-version="true"/>
+<script src="~/js/validations.js"></script>
+<h1 class="login-title">Вход</h1>
+
 @if (TempData["error"] is not null)
 {
-    <div>
+    <div class="error-message">
         @TempData["error"]
     </div>
 }
-<form method="post" asp-action="LogIn">
-    <label asp-for="Email"> Введите Email <br/>
-        <input type="email" asp-for="Email"/>
+<form method="post" asp-action="LogIn" class="login-form">
+    <label asp-for="Email" class="form-label">
+        Введите Email <br/>
+        <input type="email" asp-for="Email" class="form-input"/>
     </label>
-    <label asp-for="Password"> Введите пароль <br/>
-        <input type="password" asp-for="Password"/>
+    <label asp-for="Password" class="form-label">
+        Введите пароль <br/>
+        <input type="password" asp-for="Password" class="form-input"/>
     </label>
-    
-    <input type="submit" value="Войти"/>
+
+    <input type="submit" value="Войти" class="submit-btn"/>
 </form>
