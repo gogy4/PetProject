@@ -9,7 +9,7 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllersWithViews();
 builder.Services.AddScoped<PasteService>();
 builder.Services.AddScoped<RegisterService>();
-builder.Services.AddScoped<PasteUserService>();
+builder.Services.AddScoped<ProfileService>();
 builder.Services.AddScoped<LogInService>();
 
 // Настройка логирования

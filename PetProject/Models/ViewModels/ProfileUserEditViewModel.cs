@@ -5,10 +5,8 @@ using Microsoft.AspNetCore.Mvc.ModelBinding;
 
 namespace PetProject.Models;
 
-public class UserEdit 
+public class ProfileUserEditViewModel 
 {
-    [HiddenInput]
-    [BindNever]
     public string? Id { get; set; }
     [Required(ErrorMessage = "Имя не может быть пустым")]
     [StringLength(50, MinimumLength = 2, ErrorMessage = "Имя должно быть от 2 до 50 символов")]
@@ -25,12 +23,12 @@ public class UserEdit
     [DataType(DataType.Password)]
     public string PasswordConfirm { get; set; }
     
-    public UserEdit()
+    public ProfileUserEditViewModel()
     {
         
     }
 
-    public UserEdit(User user)
+    public ProfileUserEditViewModel(User user)
     {
         Id = user.Id;
         Name = user.Name;

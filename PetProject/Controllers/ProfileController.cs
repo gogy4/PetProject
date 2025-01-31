@@ -11,11 +11,11 @@ namespace PetProject.Controllers;
 [Route("profile")]
 public class ProfileController : Controller
 {
-    private readonly PasteUserService pasteUserService;
+    private readonly ProfileService _profileService;
 
-    public ProfileController(PasteUserService pasteUserService)
+    public ProfileController(ProfileService profileService)
     {
-        this.pasteUserService = pasteUserService;
+        this._profileService = profileService;
     }
 
     [HttpGet]
@@ -27,15 +27,15 @@ public class ProfileController : Controller
         if (string.IsNullOrEmpty(currentUserId))
             return RedirectToAction("Register", "Register");
 
-        var user = await pasteUserService.GetUser(currentUserId);
-        var pastes = pasteUserService.GetPastesByUserId(currentUserId);
+        var user = await _profileService.GetUser(currentUserId);
+        var pastes = _profileService.GetPastesByUserId(currentUserId);
 
         if (user == null)
             return RedirectToAction("Register", "Register");
 
         var viewModel = new ProfileViewModel
         {
-            User = new UserEdit(user),
+            User = new ProfileUserEditViewModel(user),
             Pastes = pastes
         };
         return View(viewModel);
@@ -43,10 +43,10 @@ public class ProfileController : Controller
 
     [HttpPost]
     [Route("{id}")]
-    public async Task<IActionResult> Edit(ProfileViewModel userPasteModel)
+    public async Task<IActionResult> Edit(ProfileViewModel model)
     {
         var error = false;
-        var userEdit = userPasteModel.User;
+        var userEdit = model.User;
         
         if (!string.IsNullOrEmpty(userEdit.NewPassword))
         {
@@ -71,8 +71,8 @@ public class ProfileController : Controller
                 error = true;
             }
 
-            var user = await pasteUserService.GetUser(userEdit.Id);
-            var passwordCorrect = pasteUserService.CheckPassword(userEdit.Password, user.Password);
+            var user = await _profileService.GetUser(userEdit.Id);
+            var passwordCorrect = _profileService.CheckPassword(userEdit.Password, user.Password);
             if (!passwordCorrect)
             {
                 ModelState.AddModelError("Password", "Вы ввели неверный прошлый пароль");
@@ -82,34 +82,34 @@ public class ProfileController : Controller
 
         var currentUserId = User.FindFirstValue(ClaimTypes.NameIdentifier);
 
-        var pastes = pasteUserService.GetPastesByUserId(currentUserId);
+        var pastes = _profileService.GetPastesByUserId(currentUserId);
 
         var viewModel = new ProfileViewModel
         {
-            User = new UserEdit(await pasteUserService.GetUser(currentUserId)),
+            User = new ProfileUserEditViewModel(await _profileService.GetUser(currentUserId)),
             Pastes = pastes
         };
         if (error)
         {
             return View("Profile", viewModel);
         }
-        await pasteUserService.EditUser(userEdit);
+        await _profileService.EditUser(userEdit);
         return RedirectToAction("Profile");
     }
 
-    public async Task<IActionResult> Delete(UserEdit userEdit)
+    public async Task<IActionResult> Delete(ProfileUserEditViewModel userEdit)
     {
         var currentUserId = User.FindFirstValue(ClaimTypes.NameIdentifier);
         if (userEdit.Id != currentUserId) return Forbid();
 
-        await pasteUserService.DeleteUser(userEdit.Id);
+        await _profileService.DeleteUser(userEdit.Id);
         return RedirectToAction("", "Home");
     }
     [Route("deleteallpastes")]
     public async Task<IActionResult> DeleteAllPastes()
     {
         var currentUserId = User.FindFirstValue(ClaimTypes.NameIdentifier);
-        await pasteUserService.DeleteAllPastes(currentUserId);
+        await _profileService.DeleteAllPastes(currentUserId);
         return RedirectToAction("Profile");
     }
 
@@ -129,7 +129,7 @@ public class ProfileController : Controller
     [Route("DeletePaste")]
     public async Task<IActionResult> DeleteConfirmed(string id)
     {
-        await pasteUserService.DeletePaste(id);
+        await _profileService.DeletePaste(id);
         return RedirectToAction("Profile");
     }
 }

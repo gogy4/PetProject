@@ -3,14 +3,14 @@ using PetProject.Models;
 
 namespace PetProject.Services;
 
-public class PasteUserService(AppDbContext db) : Service(db)
+public class ProfileService(AppDbContext db) : Service(db)
 {
     public bool CheckPassword(string newPassword, int confirmPassword)
     {
         return utils.CheckPassword(newPassword, confirmPassword);
     }
 
-    public async Task EditUser(UserEdit userEdit)
+    public async Task EditUser(ProfileUserEditViewModel userEdit)
     {
         var user = await db.Users.FindAsync(userEdit.Id);
         if (!string.IsNullOrEmpty(userEdit.Name)) user.Name = userEdit.Name;

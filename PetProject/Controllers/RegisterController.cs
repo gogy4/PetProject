@@ -29,7 +29,7 @@ public class RegisterController : Controller
 
     [Route("register")]
     [HttpPost]
-    public async Task<IActionResult> RegisterToDB(UserEdit userData)
+    public async Task<IActionResult> RegisterToDB(RegisterViewModel userData)
     {
         var error = false;
         if (await registerService.CheckEmail(userData.Email))

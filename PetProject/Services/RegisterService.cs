@@ -5,7 +5,7 @@ namespace PetProject.Services;
 
 public class RegisterService(AppDbContext db) : Service(db)
 {
-    public async Task<User> SaveHashedPassword(UserEdit userData)
+    public async Task<User> SaveHashedPassword(RegisterViewModel userData)
     {
         var uniqueId = utils.GenerateUniqueId();
         while (db.Pastes.Any(x => x.Id == uniqueId)) uniqueId = utils.GenerateUniqueId();

@@ -8,11 +8,11 @@
 <script src="~/js/script.js"></script>
 
 <form asp-action="Edit" method="post" class="profile-form">
-    <input type="hidden" asp-for="User.Name" class="hidden-input" />
-    <input type="hidden" asp-for="User.Email" class="hidden-input" />
-    <input type="hidden" asp-for="User.Password" class="hidden-input" />
-    <input type="hidden" asp-for="User.NewPassword" class="hidden-input" />
-    <input type="hidden" asp-for="User.PasswordConfirm" class="hidden-input" />
+    <input type="hidden" asp-for="User.Id" class="hidden-input"/>
+    <input type="hidden" asp-for="User.Email" class="hidden-input"/>
+    <input type="hidden" asp-for="User.Password" class="hidden-input"/>
+    <input type="hidden" asp-for="User.NewPassword" class="hidden-input"/>
+    <input type="hidden" asp-for="User.PasswordConfirm" class="hidden-input"/>
 
     <p class="form-group">
         <label asp-for="User.Name" class="form-label">Изменить имя</label><br/>
