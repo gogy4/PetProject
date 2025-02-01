@@ -102,6 +102,11 @@ public class ProfileController : Controller
         var currentUserId = User.FindFirstValue(ClaimTypes.NameIdentifier);
         if (userEdit.Id != currentUserId) return Forbid();
 
+        await HttpContext.SignOutAsync(CookieAuthenticationDefaults.AuthenticationScheme);
+        foreach (var cookie in HttpContext.Request.Cookies.Keys) HttpContext.Response.Cookies.Delete(cookie);
+        HttpContext.User = new ClaimsPrincipal(new ClaimsIdentity());
+        TempData["Message"] = "Вы вышли из аккаунта";
+
         await _profileService.DeleteUser(userEdit.Id);
         return RedirectToAction("", "Home");
     }
