@@ -7,12 +7,15 @@
 <link rel="stylesheet" href="~/css/profile.css" asp-append-version="true" />
 <script src="~/js/script.js"></script>
 
+<div asp-validation-summary="All" class="validation-summary"></div>
+
 <form asp-action="Edit" method="post" class="profile-form">
     <input type="hidden" asp-for="User.Id" class="hidden-input"/>
     <input type="hidden" asp-for="User.Email" class="hidden-input"/>
     <input type="hidden" asp-for="User.Password" class="hidden-input"/>
     <input type="hidden" asp-for="User.NewPassword" class="hidden-input"/>
     <input type="hidden" asp-for="User.PasswordConfirm" class="hidden-input"/>
+    <input type="hidden" name="Operation" value="ChangeName" />
 
     <p class="form-group">
         <label asp-for="User.Name" class="form-label">Изменить имя</label><br/>
@@ -25,11 +28,12 @@
 </form>
 
 <form asp-action="Edit" method="post" class="profile-form">
-    <input type="hidden" asp-for="User.Id" class="hidden-input" />
-    <input type="hidden" asp-for="User.Name" class="hidden-input" />
-    <input type="hidden" asp-for="User.Password" class="hidden-input" />
-    <input type="hidden" asp-for="User.NewPassword" class="hidden-input" />
-    <input type="hidden" asp-for="User.PasswordConfirm" class="hidden-input" />
+    <input type="hidden" asp-for="User.Id" class="hidden-input"/>
+    <input type="hidden" asp-for="User.Name" class="hidden-input"/>
+    <input type="hidden" asp-for="User.Password" class="hidden-input"/>
+    <input type="hidden" asp-for="User.NewPassword" class="hidden-input"/>
+    <input type="hidden" asp-for="User.PasswordConfirm" class="hidden-input"/>
+    <input type="hidden" name="Operation" value="ChangeEmail" />
 
     <p class="form-group">
         <label asp-for="User.Email" class="form-label">Изменить адрес электронной почты</label><br/>
@@ -42,10 +46,10 @@
 </form>
 
 <form asp-action="Edit" method="post" class="profile-form">
-    <div asp-validation-summary="All" class="validation-summary"></div>
-    <input type="hidden" asp-for="User.Id" class="hidden-input" />
-    <input type="hidden" asp-for="User.Name" class="hidden-input" />
-    <input type="hidden" asp-for="User.Email" class="hidden-input" />
+    <input type="hidden" asp-for="User.Id" class="hidden-input"/>
+    <input type="hidden" asp-for="User.Name" class="hidden-input"/>
+    <input type="hidden" asp-for="User.Email" class="hidden-input"/>
+    <input type="hidden" name="Operation" value="ChangePassword" />
 
     <p class="form-group">
         <label asp-for="User.Password" class="form-label">Введите предыдущий пароль</label><br/>
@@ -82,7 +86,6 @@
                 <br/>
                 <a asp-controller="Paste" asp-action="GetPaste" asp-route-id="@paste.Id" class="open-paste-link">Открыть</a>
                 <a asp-action="DeleteConfirmed" asp-route-id="@paste.Id" class="open-paste-link">Удалить</a>
-
             </li>
         }
     </ul>
@@ -97,8 +100,7 @@ else
     <input type="submit" value="Выйти из аккаунта" class="submit-btn"/>
 </form>
 
-<form asp-action="Delete" method="post" class="delete-user-form">
+<form asp-action="DeleteUser" method="post" class="delete-user-form">
     <input type="hidden" name="id" asp-for="User.Id" class="hidden-input"/>
     <input type="submit" value="Удалить пользователя" class="submit-btn delete-user-btn"/>
 </form>
-

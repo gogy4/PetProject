@@ -1,10 +1,12 @@
 ﻿using System.IO.Compression;
+using System.Security.Claims;
 using System.Text;
+using PetProject.Models;
 
 namespace PetProject.Utils;
 
 public class PasteUtils
-{ 
+{
     public string DecompressString(byte[] byteArr)
     {
         var resultString = string.Empty;
@@ -31,5 +33,14 @@ public class PasteUtils
         byteArr = stream.ToArray();
 
         return byteArr;
+    }
+
+    public async Task<string> CheckRights(HttpContext httpContext, Paste paste)
+    {
+        if (paste == null) return "Прошлая паста была удалена или не найдена";
+
+        return httpContext.User.FindFirstValue(ClaimTypes.NameIdentifier) != paste.UserId
+            ? "Вы не можете удалить чужую пасту"
+            : "";
     }
 }

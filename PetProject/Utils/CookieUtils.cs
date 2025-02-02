@@ -18,4 +18,13 @@ public class CookieUtils
 
         await httpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme, principal);
     }
+
+    public async Task DeleteCookie(HttpContext httpContext)
+    {
+        await httpContext.SignOutAsync(CookieAuthenticationDefaults.AuthenticationScheme);
+
+        foreach (var cookie in httpContext.Request.Cookies.Keys) httpContext.Response.Cookies.Delete(cookie);
+
+        httpContext.User = new ClaimsPrincipal(new ClaimsIdentity());
+    }
 }

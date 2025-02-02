@@ -1,4 +1,5 @@
-﻿using PetProject.Data;
+﻿using Microsoft.AspNetCore.Mvc.ModelBinding;
+using PetProject.Data;
 using PetProject.Models;
 
 namespace PetProject.Services;
@@ -21,9 +22,9 @@ public class RegisterService(AppDbContext db) : Service(db)
         await db.SaveChangesAsync();
         return user;
     }
-
-    public async Task<bool> CheckEmail(string email)
+    
+    public async Task<bool> CheckCriteriaPassword(RegisterViewModel user, string password, ModelStateDictionary modelState)
     {
-        return await db.Users.AnyAsync(x => x.Email == email);
+        return await utils.CheckCriteriaPassword(user, password, modelState,db);
     }
 }

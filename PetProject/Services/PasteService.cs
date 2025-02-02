@@ -16,7 +16,7 @@ public class PasteService(AppDbContext db) : Service(db)
         await using var transaction = await db.Database.BeginTransactionAsync();
         while (await db.Pastes.AnyAsync(x => x.Id == uniqueId)) uniqueId = utils.GenerateUniqueId();
 
-        if (userId is null) userId = "Не авторизован";
+        userId ??= "Не авторизован";
 
         var paste = new Paste
         {
@@ -38,12 +38,11 @@ public class PasteService(AppDbContext db) : Service(db)
     public async Task<TextPaste?> GetPasteWithText(string id)
     {
         var paste = await db.Pastes.FirstOrDefaultAsync(x => x.Id == id && x.ExpirationDate > DateTime.UtcNow);
-        if (paste is null) return null;
-        return new TextPaste(paste.Id, paste.Date, pasteUtils.DecompressString(paste.Content), paste.UserId);
+        return paste is null ? null : new TextPaste(paste.Id, paste.Date, pasteUtils.DecompressString(paste.Content), paste.UserId);
     }
 
 
-    public Paste GetPasteById(string id)
+    public async Task<Paste> GetPasteById(string id)
     {
         return db.Pastes.FirstOrDefault(p => p.Id == id);
     }
@@ -65,5 +64,10 @@ public class PasteService(AppDbContext db) : Service(db)
             Content = content
         };
         return textPaste;
+    }
+
+    public async Task<string> CheckRights(HttpContext httpContext, Paste paste)
+    {
+        return await pasteUtils.CheckRights(httpContext, paste);
     }
 }

@@ -1,11 +1,8 @@
-﻿using System.ComponentModel;
-using System.ComponentModel.DataAnnotations;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.ModelBinding;
+﻿using System.ComponentModel.DataAnnotations;
 
 namespace PetProject.Models;
 
-public class RegisterViewModel : IUser
+public interface IUser
 {
     public string? Id { get; set; }
     [Required(ErrorMessage = "Имя не может быть пустым")]
@@ -16,19 +13,7 @@ public class RegisterViewModel : IUser
     public string Email { get; set; } 
     [DataType(DataType.Password)]
     public string? Password { get; set; }
-    [Compare("Password", ErrorMessage = "Пароли не совпадают")]
+    [Compare("NewPassword", ErrorMessage = "Пароли не совпадают")]
     [DataType(DataType.Password)]
     public string PasswordConfirm { get; set; }
-    
-    public RegisterViewModel()
-    {
-        
-    }
-
-    public RegisterViewModel(User user)
-    {
-        Id = user.Id;
-        Name = user.Name;
-        Email = user.Email;
-    }
 }

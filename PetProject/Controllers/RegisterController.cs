@@ -11,6 +11,7 @@ namespace PetProject.Controllers;
 public class RegisterController : Controller
 {
     private readonly RegisterService registerService;
+    private readonly CookieUtils cookieUtils = new();
 
     public RegisterController(RegisterService registerService)
     {
@@ -31,44 +32,11 @@ public class RegisterController : Controller
     [HttpPost]
     public async Task<IActionResult> RegisterToDB(RegisterViewModel userData)
     {
-        var error = false;
-        if (await registerService.CheckEmail(userData.Email))
-        {
-            ModelState.AddModelError("Email", "Данная почта уже зарегистрирована");
-            error = true;
-        }
-        if (userData.Password.Length < 8)
-        {
-            ModelState.AddModelError("Password", "Пароль должен быть длиннее 7 символов");
-            error = true;
-        }
-
-        if (userData.Password.ToLower() == userData.Password || userData.Password.ToUpper() == userData.Password)
-        {
-            ModelState.AddModelError("Password", "Символы в пароле должны быть разного регистра," +
-                                                 " хотя бы один символ должен отличаться по регистру от других");
-            error = true;
-        }
-
-        if (!Regex.IsMatch(userData.Password, @"[!@#$%^&*?_\-+=]"))
-        {
-            ModelState.AddModelError("Password", "Пароль должен содержать хотя бы" +
-                                                 " один из специальных символов !@#$%^&*?_\\-+=");
-            error = true;
-        }
-
+        var error = await registerService.CheckCriteriaPassword(userData, userData.Password, ModelState);
         if (error) return View("Register", userData);
 
         var user = await registerService.SaveHashedPassword(userData);
-        var claims = new List<Claim>
-        {
-            new(ClaimTypes.NameIdentifier, user.Id),
-        };
-
-        var identity = new ClaimsIdentity(claims, CookieAuthenticationDefaults.AuthenticationScheme);
-        var principal = new ClaimsPrincipal(identity);
-
-        await HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme, principal);
+        await cookieUtils.CreateCookie(user.Id, HttpContext);
 
         return RedirectToAction("Profile", "Profile");
     }

@@ -1,27 +1,19 @@
 ﻿using System.Security.Claims;
 using Microsoft.AspNetCore.Mvc;
-using PetProject.Models;
 using PetProject.Services;
 
 namespace PetProject.Controllers;
 
-public class PasteController : Controller
+public class PasteController(PasteService pasteService) : Controller
 {
-    private readonly PasteService pasteService;
-
-    public PasteController(PasteService pasteService)
-    {
-        this.pasteService = pasteService;
-    }
-
     [HttpPost]
     [Route("Paste")]
-    public async Task<IActionResult> Paste(string content, int expirationDays = 7) 
+    public async Task<IActionResult> Paste(string content, int expirationDays = 7)
     {
         if (string.IsNullOrEmpty(content))
         {
             TempData["Message"] = "Паста не может быть пустой";
-            return RedirectToAction("index", "home"); // Добавляем return, чтобы завершить метод и сделать редирект
+            return RedirectToAction("index", "home"); 
         }
 
         var currentUserId = User.FindFirstValue(ClaimTypes.NameIdentifier);
@@ -43,20 +35,15 @@ public class PasteController : Controller
     }
 
     [HttpPost]
-    [ActionName("Delete")]
+    [ActionName("DeleteUser")]
     public async Task<IActionResult> DeleteConfirmed(string id)
     {
-        var paste = pasteService.GetPasteById(id);
+        var paste = await pasteService.GetPasteById(id);
 
-        if (paste == null)
+        var message = await pasteService.CheckRights(HttpContext, paste);
+        if (message.Length > 0)
         {
-            TempData["Message"] = "Прошлая паста была удалена или не найдена";
-            return RedirectToAction("Index", "Home");
-        }
-
-        if (User.FindFirstValue(ClaimTypes.NameIdentifier) != paste.UserId)
-        {
-            TempData["Message"] = "Вы не можете удалить чужую пасту";
+            TempData["Message"] = message;
             return RedirectToAction("Index", "Home");
         }
 
@@ -68,24 +55,17 @@ public class PasteController : Controller
 
     public async Task<IActionResult> EditPaste(string id, string content)
     {
-        var paste = pasteService.GetPasteById(id);
-        
+        var paste = await pasteService.GetPasteById(id);
 
-
-        if (paste == null)
+        var message = await pasteService.CheckRights(HttpContext, paste);
+        if (message.Length > 0)
         {
-            TempData["Message"] = "Прошлая паста была удалена или не найдена";
+            TempData["Message"] = message;
             return RedirectToAction("Index", "Home");
         }
 
-        if (User.FindFirstValue(ClaimTypes.NameIdentifier) != paste.UserId)
-        {
-            TempData["Message"] = "Вы не можете изменять чужую пасту";
-            return RedirectToAction("Index", "Home");
-        }
         var textPaste = await pasteService.EditPaste(paste, content);
-        
+
         return PartialView(textPaste);
-        
     }
 }
