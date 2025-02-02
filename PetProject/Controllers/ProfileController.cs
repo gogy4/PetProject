@@ -1,6 +1,4 @@
-﻿using System.Security.Claims;
-using Microsoft.AspNetCore.Mvc;
-using PetProject.Models;
+﻿using PetProject.Models;
 using PetProject.Services;
 
 namespace PetProject.Controllers;

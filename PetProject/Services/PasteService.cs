@@ -38,7 +38,9 @@ public class PasteService(AppDbContext db) : Service(db)
     public async Task<TextPaste?> GetPasteWithText(string id)
     {
         var paste = await db.Pastes.FirstOrDefaultAsync(x => x.Id == id && x.ExpirationDate > DateTime.UtcNow);
-        return paste is null ? null : new TextPaste(paste.Id, paste.Date, pasteUtils.DecompressString(paste.Content), paste.UserId);
+        return paste is null
+            ? null
+            : new TextPaste(paste.Id, paste.Date, pasteUtils.DecompressString(paste.Content), paste.UserId);
     }
 
 

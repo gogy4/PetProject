@@ -4,12 +4,11 @@ namespace PetProject.Models;
 
 public class TextPaste
 {
-    public string Id { get; set; }
-    public DateTime Date { get; set; }
-    [Required]
-    public string Content { get; set; }
-    
-    public string UserId { get; set; }
+    public string Id { get; init; }
+    public DateTime Date { get; init; }
+    [Required] public string Content { get; init; }
+
+    public string UserId { get; init; }
 
 
     public TextPaste(string id, DateTime date, string content, string userId)
@@ -29,6 +28,5 @@ public class TextPaste
 
     public TextPaste()
     {
-        
     }
 }

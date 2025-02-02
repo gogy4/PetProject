@@ -1,5 +1,4 @@
-﻿using System.Security.Claims;
-using Microsoft.AspNetCore.Mvc.ModelBinding;
+﻿using Microsoft.AspNetCore.Mvc.ModelBinding;
 using PetProject.Data;
 using PetProject.Models;
 
@@ -12,7 +11,7 @@ public class ProfileService(AppDbContext db) : Service(db)
         var user = await db.Users.FindAsync(userEdit.Id);
         if (!string.IsNullOrEmpty(userEdit.Name)) user.Name = userEdit.Name;
         if (!string.IsNullOrEmpty(userEdit.Email)) user.Email = userEdit.Email;
-        if (utils.CheckCriteriaPassword(userEdit.Password, user.Password))
+        if (utils.CheckPassword(userEdit.Password, user.Password))
             user.Password = utils.GetHashedPassword(userEdit.NewPassword);
         db.Users.Update(user);
         await db.SaveChangesAsync();
@@ -50,8 +49,9 @@ public class ProfileService(AppDbContext db) : Service(db)
         db.Pastes.Remove(paste);
         await db.SaveChangesAsync();
     }
-    
-    public async Task<bool> CheckCriteriaPassword(ProfileUserEditViewModel user, string password, ModelStateDictionary modelState, string operation)
+
+    public async Task<bool> CheckCriteriaPassword(ProfileUserEditViewModel user, string password,
+        ModelStateDictionary modelState, string operation)
     {
         return await utils.CheckCriteriaPassword(user, password, modelState, db, operation);
     }
@@ -68,7 +68,4 @@ public class ProfileService(AppDbContext db) : Service(db)
             Pastes = pastes
         };
     }
-
-    public async Task<bool> CheckName(string name) => await utils.CheckName(name);
-
 }

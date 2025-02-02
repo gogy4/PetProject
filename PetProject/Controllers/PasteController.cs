@@ -1,6 +1,4 @@
-﻿using System.Security.Claims;
-using Microsoft.AspNetCore.Mvc;
-using PetProject.Services;
+﻿using PetProject.Services;
 
 namespace PetProject.Controllers;
 
@@ -13,7 +11,7 @@ public class PasteController(PasteService pasteService) : Controller
         if (string.IsNullOrEmpty(content))
         {
             TempData["Message"] = "Паста не может быть пустой";
-            return RedirectToAction("index", "home"); 
+            return RedirectToAction("index", "home");
         }
 
         var currentUserId = User.FindFirstValue(ClaimTypes.NameIdentifier);
@@ -35,7 +33,7 @@ public class PasteController(PasteService pasteService) : Controller
     }
 
     [HttpPost]
-    [ActionName("DeleteUser")]
+    [ActionName("Delete")]
     public async Task<IActionResult> DeleteConfirmed(string id)
     {
         var paste = await pasteService.GetPasteById(id);

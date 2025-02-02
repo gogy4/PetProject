@@ -1,9 +1,6 @@
 using Microsoft.AspNetCore.Authentication.Cookies;
-using Microsoft.EntityFrameworkCore;
 using PetProject.Data;
-using PetProject.Models;
 using PetProject.Services;
-using PetProject.Utils;
 
 var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllersWithViews();
@@ -12,10 +9,9 @@ builder.Services.AddScoped<RegisterService>();
 builder.Services.AddScoped<ProfileService>();
 builder.Services.AddScoped<LogInService>();
 
-// Настройка логирования
-builder.Logging.ClearProviders(); // Удалить все стандартные провайдеры
-builder.Logging.AddConsole(); // Добавить консольный логер
-builder.Logging.AddDebug();   // Добавить логирование для отладки
+builder.Logging.ClearProviders();
+builder.Logging.AddConsole(); 
+builder.Logging.AddDebug();   
 builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
     .AddCookie(options =>
     {

@@ -6,26 +6,23 @@
 <h2 class="page-heading">Ваша паста</h2>
 <div class="buttons">
 
-@if (User.Identity.IsAuthenticated && Model.UserId == User.FindFirstValue(ClaimTypes.NameIdentifier))
-{
+    @if (User.Identity.IsAuthenticated && Model.UserId == User.FindFirstValue(ClaimTypes.NameIdentifier))
+    {
+        <p>
+            <button id="editPasteButton" class="edit-paste-button" onclick="startEditing()">Изменить пасту</button>
+        </p>
+        <p>
+        <form id="deleteForm" class="delete-form" asp-action="Delete" method="post">
+            <input asp-for="Id" type="hidden" name="Id" value="@Model.Id"/>
+            <button type="submit" class="delete-paste-button">Удалить пасту</button>
+        </form>
+        </p>
+    }
     <p>
-        <!-- Кнопка "Изменить пасту", при нажатии будет активировать редактирование -->
-        <button id="editPasteButton" class="edit-paste-button" onclick="startEditing()">Изменить пасту</button>
+        <button id="copyPasteButton" class="copy-paste-button" onclick="copyPasteContent()">Скопировать пасту</button>
     </p>
-    <p>
-    <form id="deleteForm" class="delete-form" asp-action="Delete" method="post">
-        <input asp-for="Id" type="hidden" name="Id" value="@Model.Id"/>
-        <button type="submit" class="delete-paste-button">Удалить пасту</button>
-    </form>
-    </p>
-}
-<p>
-    <!-- Кнопка "Скопировать" для копирования содержимого пасты -->
-    <button id="copyPasteButton" class="copy-paste-button" onclick="copyPasteContent()">Скопировать пасту</button>
-</p>
 
 </div>
-<!-- Форма для редактирования пасты (по умолчанию скрыта) -->
 <div id="editFormContainer" class="edit-form-container" style="display:none;">
     <form id="editForm" class="edit-form" onsubmit="submitEditForm(event)">
         <textarea name="content" id="content" class="content-textarea" rows="10" cols="50">@Model.Content</textarea>
@@ -39,57 +36,41 @@
 
 <script>
     function startEditing() {
-        // Скрываем текущий контент пасты
         document.getElementById('pasteContentContainer').style.display = 'none';
-
-        // Показываем форму редактирования
         document.getElementById('editFormContainer').style.display = 'block';
-
-        // Меняем кнопку на "Отменить редактирование"
         document.getElementById('editPasteButton').style.display = 'none';
     }
 
     function cancelEditing() {
-        // Отменяем редактирование и возвращаем оригинальный текст
         document.getElementById('pasteContentContainer').style.display = 'block';
         document.getElementById('editFormContainer').style.display = 'none';
-
-        // Показываем кнопку редактирования снова
         document.getElementById('editPasteButton').style.display = 'block';
     }
 
     function submitEditForm(event) {
-        event.preventDefault(); // Останавливаем стандартное поведение формы
-
+        event.preventDefault();
         const form = event.target;
         const formData = new FormData(form);
-
-        // Получаем содержимое текстового поля
         const content = formData.get('content').trim();
 
-        // Проверяем, если текст пустой
         if (content === "") {
             alert("Ошибка: паста не может быть пустой или состоять только из пробелов.");
-            return; // Останавливаем отправку формы
+            return;
         }
 
-        // Отправляем данные формы с использованием fetch
         fetch('@Url.Action("EditPaste", "Paste", new { id = Model.Id })', {
             method: 'POST',
             body: formData
         })
             .then(response => response.text())
             .then(updatedContent => {
-                // Если ответ содержит сообщение об ошибке, показываем его
                 if (updatedContent.includes("Паста не может быть пустой")) {
                     alert("Ошибка: паста не может быть пустой или состоять только из пробелов.");
                 } else {
-                    // Обновляем содержимое пасты на странице
                     document.getElementById('pasteContentContainer').innerHTML = updatedContent;
-                    // Возвращаем отображение текста пасты
                     document.getElementById('pasteContentContainer').style.display = 'block';
                     document.getElementById('editFormContainer').style.display = 'none';
-                    document.getElementById('editPasteButton').style.display = 'block'; // Показываем кнопку редактирования
+                    document.getElementById('editPasteButton').style.display = 'block';
                 }
             })
             .catch(error => {
@@ -98,28 +79,20 @@
     }
 
     function copyPasteContent() {
-        // Получаем элемент с текстом пасты
         const pasteContent = document.getElementById('pasteContentContainer').innerText;
-
-        // Создаем временное текстовое поле для копирования текста
         const tempTextArea = document.createElement('textarea');
-        tempTextArea.value = pasteContent; // Устанавливаем значение как текст пасты
-        document.body.appendChild(tempTextArea); // Добавляем его в DOM
-
-        // Выделяем текст в текстовом поле
+        tempTextArea.value = pasteContent;
+        document.body.appendChild(tempTextArea);
         tempTextArea.select();
-        tempTextArea.setSelectionRange(0, 99999); // Для мобильных устройств
+        tempTextArea.setSelectionRange(0, 99999);
 
-        // Копируем текст в буфер обмена
         try {
-            document.execCommand('copy'); // В некоторых браузерах можно использовать document.execCommand
+            document.execCommand('copy');
             alert('Паста скопирована в буфер обмена!');
         } catch (err) {
             alert('Не удалось скопировать текст. Попробуйте снова.');
         }
 
-        // Удаляем временное текстовое поле
         document.body.removeChild(tempTextArea);
     }
-
 </script>

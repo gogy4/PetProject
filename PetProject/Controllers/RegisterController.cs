@@ -1,22 +1,11 @@
-﻿using System.Security.Claims;
-using System.Text.RegularExpressions;
-using Microsoft.AspNetCore.Authentication;
-using Microsoft.AspNetCore.Authentication.Cookies;
-using Microsoft.AspNetCore.Mvc;
-using PetProject.Models;
+﻿using PetProject.Models;
 using PetProject.Services;
 
 namespace PetProject.Controllers;
 
-public class RegisterController : Controller
+public class RegisterController(RegisterService registerService) : Controller
 {
-    private readonly RegisterService registerService;
     private readonly CookieUtils cookieUtils = new();
-
-    public RegisterController(RegisterService registerService)
-    {
-        this.registerService = registerService;
-    }
 
     [Route("register")]
     [HttpGet]
